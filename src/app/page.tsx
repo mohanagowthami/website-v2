@@ -1,14 +1,11 @@
-import { LandingSection, Results, TouchInForm } from "./components/landing-section";
+import {Footercomponent} from "./components/Footer";
 
 
 
 export default function Home() {
   return (
     <div>
-      This is website 
-      <LandingSection/>
-      <TouchInForm/>
-      <Results/>
+      <Footercomponent/>
     </div>
   );
 }
