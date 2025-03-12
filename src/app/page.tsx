@@ -9,6 +9,7 @@ export default function Home() {
       <LandingSection/>
       <TouchInForm/>
       <Results/>
+      
     </div>
   );
 }
