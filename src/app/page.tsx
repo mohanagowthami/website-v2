@@ -1,15 +1,16 @@
-import { LandingSection, Results, TouchInForm } from "./components/landing-section";
+import FAQs from "./components/faqs/Faqs";
+import { Footercomponent } from "./components/footer";
+import { StandOut } from "./components/stand-out";
+
 
 
 
 export default function Home() {
   return (
     <div>
-      This is website 
-      <LandingSection/>
-      <TouchInForm/>
-      <Results/>
-      
+      <StandOut/>
+      <FAQs/>
+      <Footercomponent/>
     </div>
-  );
+  ); 
 }
