@@ -1,5 +1,5 @@
-import { Results } from "./Results";
-import { TouchInForm } from "./TouchInForm";
+import { Header } from "./Header";
+import { LeftRightSection } from "./LeftRightSection";
 import {LandingSection} from "./LandingSection";
 
-export { Results,TouchInForm, LandingSection}
+export { Header,LeftRightSection, LandingSection}
