@@ -11,11 +11,10 @@ import { FAQs } from "./components/faqs";
 export default function Home() {
   return (
     <div>
-      <Programs/>
-      
-    <LandingSection/>
+      <LandingSection/>
       <AluminiCard/>
       <RequestCallbackButton />
+      <Programs/>
       <StandOut/>
       <FAQs/>
       <Footercomponent/>
