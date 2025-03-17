@@ -4,6 +4,7 @@ import {Footercomponent} from "./components/footer";
 import { StandOut } from "./components/stand-out";
 import { RequestCallbackButton } from "@/Common";
 import { LandingSection } from "./components/landing-section";
+import { FAQs } from "./components/faqs";
 
 
 export default function Home() {
@@ -12,9 +13,9 @@ export default function Home() {
       
     <LandingSection/>
       <AluminiCard/>
-      <div className="flex self-right mt-1 justify-center ml-300">
-        <RequestCallbackButton /></div>
+      <RequestCallbackButton />
       <StandOut/>
+      <FAQs/>
       <Footercomponent/>
     </div>
   );
