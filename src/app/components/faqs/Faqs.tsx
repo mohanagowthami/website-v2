@@ -77,12 +77,12 @@ const faqs = [
               <span className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-500">
                 {openIndex === index ? "×" : "+"}
               </span>
-              <span className="flex-1 ml-4 text-gray-700 text-xs md:text-sm font-poppins font-medium">
+              <span className="flex-1 ml-4 text-gray-700 text-xs md:text-sm lg:text-lg font-poppins font-medium">
                 {faq.question}
               </span>
             </button>
             {openIndex === index && (
-              <div className="p-3 border-t bg-gray-50 text-gray-500 text-xs md:text-sm font-poppins">
+              <div className="p-3 border-t bg-gray-50 text-gray-500 text-xs md:text-sm lg:text-lg font-poppins">
                 {faq.answer}
               </div>
             )}
