@@ -1,6 +1,6 @@
 
 
-import {Footercomponent} from "./components/Footer";
+import { Footercomponent } from "./components/footer";
 import { StandOut } from "./components/stand-out";
 import { AluminiComponent } from "@/Common/AluminiComponent";
 
