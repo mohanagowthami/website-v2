@@ -44,7 +44,7 @@ const AluminiCard = () => {
                 <h3 className="mt-4 text-sm font-semibold">{person.name}</h3>
                 <p className="text-gray-500">{person.course}</p>
                 <p className="text-gray-500">{person.college}</p>
-                <div className="content-center flex justify-center"><img src="arrow.svg"/></div>
+                {/* <div className="content-center flex justify-center"><img src="arrow.svg"/></div> */}
                 <div className="mt-4 border-t pt-4"></div>
                 <Image src={person.company} alt="Company" width={100} height={30} className="mx-auto mt-auto" />
               </div>
