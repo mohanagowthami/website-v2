@@ -2,10 +2,9 @@
 import AluminiCard from "@/Common/AluminiCard";
 import {Footercomponent} from "./components/footer";
 import { StandOut } from "./components/stand-out";
-import { RequestCallbackButton } from "@/Common";
-import Programs from "./components/programs";
 import { LandingSection } from "./components/landing-section";
 import { FAQs } from "./components/faqs";
+import { Programs } from "./components/programs";
 
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
     <div>
       <LandingSection/>
       <AluminiCard/>
-      <RequestCallbackButton />
       <Programs/>
       <StandOut/>
       <FAQs/>

@@ -2,11 +2,11 @@ export  const Header=()=>{
     return (
         <header className="flex flex-col sm:flex-row justify-between items-center px-[20px] sm:px-[40px] py-[20px] bg-white border-b border-gray-300">
         {/* Logo Section */}
-        <div className="ml-0 sm:ml-[60px] text-center sm:text-left">
+        <div className="ml-0 text-center sm:ml-[60px] sm:text-left">
           <h1 className="text-[#1a73e8] text-[30px] sm:text-[40px] font-bold mb-[5px]">
             HyperSonic
           </h1>
-          <p className="text-gray-600 text-[13px] sm:text-[15px] sm:ml-[50px]">
+          <p className="text-gray-600 text-center text-[13px] sm:text-[15px] sm:ml-[50px]">
             Training and Consultancy Services
           </p>
         </div>
