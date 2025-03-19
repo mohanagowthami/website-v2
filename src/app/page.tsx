@@ -1,8 +1,9 @@
 
-import AluminiCard from "@/Common/AluminiCard";
-import {Footercomponent} from "./components/footer";
+
+import {Footercomponent} from "./components/Footer";
 import { StandOut } from "./components/stand-out";
-import { RequestCallbackButton } from "@/Common";
+import { AluminiComponent } from "@/Common/AluminiComponent";
+
 import Programs from "./components/programs";
 import { LandingSection } from "./components/landing-section";
 import { FAQs } from "./components/faqs";
@@ -11,9 +12,11 @@ import { FAQs } from "./components/faqs";
 export default function Home() {
   return (
     <div>
-      <LandingSection/>
-      <AluminiCard/>
-      <RequestCallbackButton />
+      
+      
+    <LandingSection/>
+      
+      <AluminiComponent/>
       <Programs/>
       <StandOut/>
       <FAQs/>
