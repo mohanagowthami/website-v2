@@ -1,135 +1,138 @@
 export const LeftRightSection = () => {
   return (
-      <div className="flex flex-col lg:flex-row gap-20 my-8 mx-5 lg:mx-20 items-center lg:items-start pt-[70px]">
+    <div className="bg-white w-full px-10 sm:px-6 lg:px-26 py-24 sm:py-10 lg:py-24">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         {/* Left Section */}
-<div className="lg:w-1/2 w-full p-5 pt-15 text-center lg:text-left">
-  <h1 className="text-[44px] lg:text-[44px] text-gray-800 font-semibold leading-tight">
-    Level Up Your Skills and<br></br>
-    <span className="text-2xl lg:text-[44px] text-blue-500 font-bold mb-3"> Land Your Dream Job </span>
-  </h1>
-  <p className="text-gray-600 text-[16px] mb-6">
-    Master industry-standard skills through expert-led teaching, hands-on training, real-world projects, and personalized mentorship.
-  </p>
-
-  {/* Adjusted Box Section */}
-  <div className="p-6 border border-gray-300 flex justify-start items-start rounded-[10%] h-[230px] bg-white w-full lg:w-[63%] max-w-[930px] lg:mx-0 mx-auto">
-    <div className="grid grid-cols">
-      {/* Get Assisted */}
-      <div className="flex items-center gap-5 mr-[5%] justify-end">
-        {/* Icon */}
-        <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-          <img src="tick.svg" alt="Get Assisted" className="w-8 h-8 object-cover" />
-        </div>
-        {/* Text Content */}
-        <div>
-          <p className="text-lg font-semibold">500+</p>
-          <p className="text-sm text-gray-600">Get Assisted</p>
-        </div>
-      </div>
-      {/* Vertical Line */}
+        <div className="space-y-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+            Level Up Your Skills and{" "}
+            <span className="text-blue-600">Land Your Dream Job</span>
+          </h1>
+          <p className="text-base sm:text-lg text-gray-600">
+            Master industry-standard skills through expert-led teaching, hands-on training, real-world projects, and personalized mentorship.
+          </p>
+          <div className="bg-white p-6 rounded-3xl shadow-md w-full lg:w-3/4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3">
+                <img src="500+.svg" alt="500+ Assisted" className="w-9 h-9" />
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">500+</h3>
+                  <p className="text-sm text-gray-600">Get Assisted</p>
+                </div>
+              </div>
+              {/* Vertical Line */}
       <div className="flex justify-center items-center mx-5">
-        <div className="h-12 w-[2px] bg-gray-300"></div>
+        <div className="h-12 w-[3px] bg-gray-300"></div>
       </div>
 
-      {/* Collaborations */}
-      <div className="flex items-center gap-5 justify-start">
-        <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
-          <img src="deal.png" alt="Collaborations" className="w-8 h-8 object-cover" />
-        </div>
-        <div>
-          <p className="text-lg font-semibold">10+</p>
-          <p className="text-sm text-gray-600">Collaborations</p>
-        </div>
-      </div>
-
-      {/* Divider */}
+              <div className="flex items-center gap-3">
+                <img src="10+.svg" alt="10+ Collaborations" className="w-9 h-9" />
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">10+</h3>
+                  <p className="text-sm text-gray-600">Collaborations</p>
+                </div>
+              </div>
+                    {/* Divider */}
       <div className="col-span-3 my-8 flex flex-col-4">
-        <div className="w-[45%] border-t-2 border-gray-300"></div>
+        <div className="w-[45%] border-t-3 border-gray-300"></div>
         <div className="w-[15%]"></div>
-        <div className="w-[45%] border-t-2 border-gray-300"></div>
+        <div className="w-[45%] border-t-3 border-gray-300"></div>
       </div>
 
-      {/* Average Salary */}
-      <div className="flex items-center gap-5 justify-end">
-        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-          <img src="coin.png" alt="Average Salary" className="w-8 h-8 object-cover" />
-        </div>
-        <div>
-          <p className="text-lg font-semibold">6 LPA</p>
-          <p className="text-sm text-gray-600">Average Salary</p>
-        </div>
-      </div>
-      {/* Vertical Line */}
+              <div className="flex items-center gap-3">
+                <img src="6LPA.svg" alt="6LPA Average Salary" className="w-9 h-9" />
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">6LPA</h3>
+                  <p className="text-sm text-gray-600">Average Salary</p>
+                </div>
+              </div>
+              {/* Vertical Line */}
       <div className="flex justify-center items-center mx-5">
-        <div className="h-14 w-[2px] bg-gray-300"></div>
+        <div className="h-12 w-[3px] bg-gray-300"></div>
       </div>
 
-      {/* Highest Salary */}
-      <div className="flex items-center gap-5 justify-start">
-        <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-          <img src="salary.png" alt="Highest Salary" className="w-8 h-8 object-cover" />
+              <div className="flex items-center gap-3">
+                <img src="18Lpa.svg" alt="18LPA Highest Salary" className="w-9 h-9" />
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">18 LPA</h3>
+                  <p className="text-sm text-gray-600">Highest Salary</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <p className="text-lg font-semibold">18 LPA</p>
-          <p className="text-sm text-gray-600">Highest Salary</p>
+
+        {/* Right Section */}
+        <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Let's get in touch</h2>
+          <form className="mt-6 space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Name</label>
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Mobile Number</label>
+              <input
+                type="text"
+                placeholder="Enter your 10-digit mobile number"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Email ID</label>
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Highest Graduation</label>
+              <input
+                type="text"
+                placeholder="Enter your highest graduation"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Start Date</label>
+                <input
+                  type="date"
+                  placeholder="dd-mm-yyyy"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">End Date</label>
+                <input
+                  type="date"
+                  placeholder="dd-mm-yyyy"
+                  className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Referral Code</label>
+              <input
+                type="text"
+                placeholder="Enter your referral code"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-          {/* Right Section */}
-          <div className=" w-[40%] p-6  bg-white border border-gray-200 rounded-4xl shadow-md">
-  <h1 className="text-left text-2xl font-bold mb-6">Let's get in touch</h1>
-  <form className="space-y-3">
-    {/* Name */}
-    <div className="flex flex-col gap-1">
-      <label className="text-gray-700 text-sm font-medium">Name</label>
-      <input type="text" placeholder="Enter your full name" className="w-full p-1 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
-
-    {/* Mobile Number */}
-    <div className="flex flex-col gap-1">
-      <label className="text-gray-700 text-sm font-medium">Mobile Number</label>
-      <input type="tel" placeholder="Enter your 10-digit mobile number" className="w-full p-1 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
-
-    {/* Email */}
-    <div className="flex flex-col gap-1">
-      <label className="text-gray-700 text-sm font-medium">Email ID</label>
-      <input type="email" placeholder="Enter your email address" className="w-full p-1 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
-
-    {/* Highest Graduation */}
-    <div className="flex flex-col gap-1">
-      <label className="text-gray-700 text-sm font-medium">Highest Graduation</label>
-      <input type="text" placeholder="Enter your highest graduation" className="w-full p-1 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
-
-    {/* Start Date & End Date */}
-    <div className="flex flex-col md:flex-row gap-4">
-      <div className="flex flex-col gap-1 w-full">
-        <label className="text-gray-700 text-sm font-medium">Start Date</label>
-        <input type="date" className="w-full p-1 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </div>
-      <div className="flex flex-col gap-1 w-full">
-        <label className="text-gray-700 text-sm font-medium">End Date</label>
-        <input type="date" className="w-full p-1 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </div>
-    </div>
-
-    {/* Referral Code */}
-    <div className="flex flex-col gap-1">
-      <label className="text-gray-700 text-sm font-medium">Referral Code</label>
-      <input type="text" placeholder="Enter your referral code" className="w-full p-1 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-    </div>
-
-    {/* Submit Button */}
-    <button type="submit" className="w-full bg-blue-600 text-white font-medium py-2 rounded-md hover:bg-blue-700 transition duration-200">
-      Submit
-    </button>
-  </form>
-</div>
-      </div>
-  )
-}
+  );
+};
