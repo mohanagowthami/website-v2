@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
+=======
+import {Footercomponent} from "./components/Footer";
+import { StandOut } from "./components/stand-out";
+
+>>>>>>> Stashed changes
 
 
 import { Footercomponent } from "./components/Footer";
@@ -23,8 +29,17 @@ export default function Home() {
       <ExpertTutors/>
       <FAQs/>
       <Footercomponent/>
+<<<<<<< Updated upstream
       
       
+=======
+      <StandOut/>
+>>>>>>> Stashed changes
     </div>
+<<<<<<< Updated upstream
   );
 }
+=======
+  ); 
+}
+>>>>>>> Stashed changes
