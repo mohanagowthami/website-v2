@@ -1,3 +1,5 @@
+import { SectionTitle } from "@/Common/SectionTitle";
+import { SectionWrapper } from "@/Common/SectionWrapper";
 import React from "react";
 
 const courses = [
@@ -43,18 +45,11 @@ const courses = [
 
 const Programs: React.FC = () => {
   return (
-    <div className="p-12">
-      <div className="text-center">
-      <div className="p-4 md:p-8 lg:p-12">
-  <h1 className="text-[20px] md:text-[25px] lg:text-[30px]">
-    Choose Your Path to <span className="text-blue-400">Success</span>
-  </h1>
-  <p className="text-gray-400 text-[10px] md:text-[12px] lg:text-[14px]">
-    Explore programs built to transform your skills into career opportunities
-  </p>
-</div>
-</div>
 
+
+  <SectionWrapper>
+    <>
+    <SectionTitle mainTitle={true} title="Choose Your Path to" blueColorTitle="Success" description="Explore programs built to transform your skills into career opportunities"/>
     <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {courses.map((course, index) => (
         <div key={index} className="border rounded-xl shadow-lg p-4 bg-white hover:shadow-xl transition duration-300">
@@ -80,7 +75,17 @@ const Programs: React.FC = () => {
         </div>
       ))}
     </div>
-    </div>
+    
+    </>
+
+
+    </SectionWrapper>
+
+ 
+
+
+   
+    
   );
 };
 
