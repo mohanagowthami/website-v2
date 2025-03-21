@@ -8,8 +8,7 @@ export  function Heading() {
         </h1>
         <p className="lg:text-[16px] sm:text-[14px] md:text-[14px] text-gray-600">
           A personalized learning experience that blends mentorship, flexibility, and job-ready skills.
-        </p>
-      </div>
+        </p>      </div>
 
       {/* Overview Section */}
       <article className="mt-8  w-full text-left ml-14">
