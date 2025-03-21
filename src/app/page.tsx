@@ -20,10 +20,11 @@ export default function Home() {
       <AluminiComponent/>
       <Programs/>
       <StandOut/>
+      <ExpertTutors/>
+    
       <FAQs/>
       <Footercomponent/>
-      <ExpertTutors/>
-      <div className="flex justify-end p-4"><RequestCallbackButton /></div>
+     
     </div>
   );
 }
