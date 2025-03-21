@@ -1,7 +1,11 @@
 const RequestCallbackButton=()=>{
-   return <button className="-mt-8 px-16 py-5 bg-blue-600 text-white rounded-lg font-extrabold">
-        Request Call Back 
-      </button>
+  
+  return (
+  <button className="px-6 py-2 bg-blue-600 text-white rounded-lg font-extrabold hover:bg-blue-700 transition">
+       Request Call Back
+     </button>
+
+  ); 
 }
 
-export default RequestCallbackButton
+export default RequestCallbackButton;

@@ -3,7 +3,7 @@ import  RequestCallbackButton  from "./RequestCBButton";
 
 export const AluminiComponent=()=>{
   return (
-    <div>
+    <div className="overflow-hidden">
       
       <div className="bg-[#FBFCFC] w-full  ">
       <AluminiCard />

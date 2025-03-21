@@ -43,7 +43,7 @@ const courses = [
 
 const Programs: React.FC = () => {
   return (
-    <div className="p-12">
+    <div className="p-25">
       <div className="text-center">
       <div className="p-4 md:p-8 lg:p-12">
   <h1 className="text-[20px] md:text-[25px] lg:text-[30px]">
