@@ -8,6 +8,7 @@ import Programs from "./components/programs";
 import { LandingSection } from "./components/landing-section";
 import { FAQs } from "./components/faqs";
 import ExpertTutors from "./components/ExpertTutors/ExpertTutors";
+import { TestimonalsSwiper } from "./components/testimonals";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       
       
     <LandingSection/>
+    <TestimonalsSwiper/>
       
       <AluminiComponent/>
       <Programs/>
