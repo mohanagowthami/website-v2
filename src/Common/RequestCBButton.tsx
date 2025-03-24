@@ -1,7 +1,14 @@
 const RequestCallbackButton=()=>{
-   return <button className="-mt-8 px-16 py-5 bg-blue-600 text-white rounded-lg font-extrabold">
-        Request Call Back 
-      </button>
+  
+  return (
+    <button
+    type="submit"
+  className="bg-[#156FEE] text-white font-medium py-3 px-6 rounded-lg flex gap-[8px]"
+  >
+   <img src="phone.svg" className="w-4 justify-items-center"/> Request Call Back
+  </button>
+
+  ); 
 }
 
-export default RequestCallbackButton
+export default RequestCallbackButton;

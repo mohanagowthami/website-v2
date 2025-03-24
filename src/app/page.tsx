@@ -5,20 +5,28 @@ import { StandOut } from "./components/stand-out";
 
 import { LandingSection } from "./components/landing-section";
 import { FAQs } from "./components/faqs";
-import { Programs } from "./components/programs";
-import { AluminiComponent } from "@/Common/AluminiComponent";
+import { AluminiComponent } from "@/Common";
+import ExpertTutors from "./components/ExpertTutors/ExpertTutors";
+import Programs from "./components/courses/programs";
+import { TestimonalsSwiper } from "./components/testimonals";
 
 
 export default function Home() {
   return (
     <div>
-      <LandingSection/>
+      
+      
+    <LandingSection/>
+      
       <AluminiComponent/>
       <Programs/>
       <StandOut/>
+      <ExpertTutors/>
+      <TestimonalsSwiper/>
+    
       <FAQs/>
       <Footercomponent/>
-      
+     
     </div>
   );
 }
