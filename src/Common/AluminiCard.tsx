@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import { SectionTitle } from "./SectionTitle";
+import RequestCallbackButton from "./RequestCBButton";
 
 const people = [
   {
@@ -14,7 +15,7 @@ const people = [
     name: "Harish Kollu",
     course: "ECE",
     college: "Krishna University College",
-    company: "/techmojologo.jpg",
+    company: "/Amazon.png",
     image: "/Harish_Kollu.webp",
   },
   {
@@ -28,7 +29,7 @@ const people = [
 
 const AlumniCard = () => {
   return (
-    <div className="text-center py-10 bg-[#fbfcfc] w-full ">
+    <div className="text-center py-10 bg-[#FBFCFC] w-full ">
       {/* Heading */}
       {/* <h2 className="text-[26px] md:text-[30px] lg:text-[36px] font-bold px-4">
         Turn Your Dreams into Reality.{" "}
@@ -61,7 +62,7 @@ const AlumniCard = () => {
                   <p className="text-gray-500 text-[14px]">{person.course}</p>
                   <p className="text-gray-500 text-[14px]">{person.college}</p>
                   <div className="mt-2">
-                    <img src="arrow.svg" alt="arrow" className="w-9 h-10 ml-[30%]" />
+                    <img src="down-arrow.svg" alt="arrow" className="w-9 h-10 ml-[30%]" />
                     <Image
                       src={person.company}
                       alt="Company"
@@ -92,7 +93,11 @@ const AlumniCard = () => {
           animation: scroll 16s linear infinite;
         }
       `}</style>
+      
     </div>
   );
 };
+
+
+
 export default AlumniCard;

@@ -16,6 +16,10 @@ interface formDataType {
 
 export const contactFormSubmission = async (formData: formDataType) => {
     try {
+
+
+
+
         const response = await fetch(
             "https://builder.io/api/v1/write/enquiry",
             {
