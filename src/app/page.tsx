@@ -17,13 +17,11 @@ export default function Home() {
       
       
     <LandingSection/>
-    <TestimonalsSwiper/>
-      
       <AluminiComponent/>
       <Programs/>
       <StandOut/>
       <ExpertTutors/>
-    
+      <TestimonalsSwiper/>    
       <FAQs/>
       <Footercomponent/>
      
