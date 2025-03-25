@@ -59,11 +59,11 @@ export const Header = () => {
 
       {/* Navigation */}
       <nav className="flex flex-wrap justify-center gap-4 sm:gap-6">
-        <a href="./#hero" className="text-blue-400 text-[16px] font-semibold hover:underline">Home</a>
-        <a href="./#programs" className="text-blue-400 text-[16px] font-semibold hover:underline">Programs</a>
-        <a href="./#why-hypersonicc" className="text-blue-400 text-[16px] font-semibold hover:underline">Why Us</a>
-        <a href="./#testimonials" className="text-blue-400 text-[16px] font-semibold hover:underline">Testimonials</a>
-        <a href="./#faqs" className="text-blue-400 text-[16px] font-semibold hover:underline">FAQ’s</a>
+        <a href="./#Home" className="text-blue-400 text-[16px] font-semibold hover:text-blue-800">Home</a>
+        <a href="./#Program" className="text-blue-400 text-[16px] font-semibold hover:text-blue-800">Programs</a>
+        <a href="./#Why-Us" className="text-blue-400 text-[16px] font-semibold hover:text-blue-800">Why Us</a>
+        <a href="./#Testimonals" className="text-blue-400 text-[16px] font-semibold hover:text-blue-800">Testimonials</a>
+        <a href="./#Faq's" className="text-blue-400 text-[16px] font-semibold hover:text-blue-800">FAQ’s</a>
       </nav>
     </header>
   );

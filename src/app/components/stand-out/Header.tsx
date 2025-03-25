@@ -1,6 +1,6 @@
 export  function Heading() {
     return (
-      <section className="flex flex-col items-center  p-6  overflow-x-hidden bg-[#f5faff]">
+      <section className="flex flex-col items-center  p-6  overflow-x-hidden bg-[#f5faff]" id="Why-Us">
       {/* Heading Section */}
       <div className="text-center ">
         <h1 className="lg:text-[36px] sm:text-[26px] md:text-[26px] font-bold ">

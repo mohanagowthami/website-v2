@@ -3,7 +3,7 @@ import {ContactForm} from "./index";
 
 export const LeftRightSection = () => {
   return (
-    <div className="bg-white w-full p-6 py-12 md:p-12 lg:px-[100px] lg:py-[150px]">
+    <div className="bg-white w-full p-6 py-12 md:p-12 lg:px-[100px] lg:py-[150px]" id="Home">
 <div className="max-w-[90%] sm:max-w-[83%] md:max-w-[75%] lg:max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[15%]">
 
         {/* Left Section */}
