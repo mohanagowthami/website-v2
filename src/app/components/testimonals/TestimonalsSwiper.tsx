@@ -212,7 +212,10 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { SectionTitle } from "@/Common/SectionTitle";
 import { ContentForSliders } from "./ContentForSliders";
-import RequestCallbackButton from "@/Common/RequestCBButton";
+import { RequestCallbackButton } from "@/Common/index";
+
+
+
 
 // Define slides data
 const slides = [

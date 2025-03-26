@@ -1,8 +1,8 @@
-import RequestCallbackButton from "./RequestCBButton";
+import RequestCallbackButton from "./RequestCBButton"
 
-export {RequestCallbackButton}
+
 import { AluminiComponent } from "./AluminiComponent";
 
-export {AluminiComponent}
+export {AluminiComponent,RequestCallbackButton}
 
 

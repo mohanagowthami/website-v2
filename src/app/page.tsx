@@ -14,17 +14,19 @@ import Programs from "./components/courses/programs";
 export default function Home() {
   return (
     <div>
-      
-      
-    <LandingSection/>
-      <AluminiComponent/>
-      <Programs/>
-      <StandOut/>
-      <ExpertTutors/>
-      <TestimonalsSwiper/>    
-      <FAQs/>
-      <Footercomponent/>
-     
+
+
+      <LandingSection />
+
+
+      <AluminiComponent />
+      <Programs />
+      <StandOut />
+      <ExpertTutors />
+      <TestimonalsSwiper />
+      <FAQs />
+      <Footercomponent />
+
     </div>
   );
 }
