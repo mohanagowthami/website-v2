@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import { SectionTitle } from "./SectionTitle";
+import RequestCallbackButton from "./RequestCBButton";
 
 const people = [
   {
@@ -92,6 +93,7 @@ const AlumniCard = () => {
           animation: scroll 16s linear infinite;
         }
       `}</style>
+      
     </div>
   );
 };
