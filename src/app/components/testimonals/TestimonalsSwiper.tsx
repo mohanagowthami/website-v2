@@ -27,7 +27,7 @@
 //         // Add smooth slide transitions
 //         speed={800} // Control the speed of the transition (in ms)
 //         effect="slide" // Use "slide" for horizontal sliding (or "fade", "cube", "coverflow", "flip" for different effects)
-        
+
 //         // Optional smooth transition settings
 //         grabCursor={true} // Changes cursor to grabbing hand during slide
 //         centeredSlides={true} // Centers active slide
@@ -42,7 +42,7 @@
 //         <SwiperSlide> slide 2</SwiperSlide>
 //         <SwiperSlide> slide 3</SwiperSlide>
 //         <SwiperSlide>slide 4</SwiperSlide>
-        
+
 //       </Swiper>
 
 //       <style jsx global>{`
@@ -50,42 +50,42 @@
 //           width: 100%;
 //           height: 400px;
 //           margin: 20px 0;
-          
+
 //           /* Customize arrow size here */
 //           --swiper-navigation-size: 30px;
 //           --swiper-navigation-color: #ff6600;
 //           --swiper-theme-color: #ff6600;
-          
+
 //           /* Add smooth transition for all animations */
 //           --swiper-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 //         }
-        
+
 //         .swiper-slide {
 //           text-align: center;
 //           font-size: 18px;
-         
+
 //           display: flex;
 //           justify-content: center;
 //           align-items: center;
-        
+
 //           border-radius: 8px;
-          
+
 //           /* Add smooth transition for slide transforms */
 //           transition: transform 0.5s ease, opacity 0.5s ease;
 //         }
-        
+
 //         /* Active slide styling */
 //         .swiper-slide-active {
 //           transform: scale(1);
 //           opacity: 1;
 //         }
-        
+
 //         /* Non-active slide styling */
 //         .swiper-slide-prev, .swiper-slide-next {
 //           transform: scale(0.85);
 //           opacity: 0.7;
 //         }
-        
+
 //         /* Additional styling for navigation arrows */
 //         .swiper-button-next,
 //         .swiper-button-prev {
@@ -95,13 +95,13 @@
 //           border-radius: 50%;
 //           transition: background-color 0.3s ease, transform 0.3s ease;
 //         }
-        
+
 //         .swiper-button-next:hover,
 //         .swiper-button-prev:hover {
 //           background-color: rgba(255, 255, 255, 0.8);
 //           transform: scale(1.1);
 //         }
-        
+
 //         /* Ensure pagination bullets are visible with smooth transitions */
 //         .swiper-pagination-bullet {
 //           width: 10px;
@@ -110,7 +110,7 @@
 //           opacity: 0.5;
 //           transition: opacity 0.3s ease, transform 0.3s ease;
 //         }
-        
+
 //         .swiper-pagination-bullet-active {
 //           opacity: 1;
 //           transform: scale(1.2);
@@ -192,16 +192,14 @@
 //         ))}
 //       </Swiper>
 //       <RequestCallbackButton alignRight={false} className="mt-6 mb-10" />
-        
 
-        
+
+
 //     </div>
 //   );
 // }
 
 
-
-// Testimonials Data
 "use client";
 
 import React from "react";
@@ -214,7 +212,6 @@ import { SectionTitle } from "@/Common/SectionTitle";
 import { ContentForSliders } from "./ContentForSliders";
 import RequestCallbackButton from "@/Common/RequestCBButton";
 
-// Define slides data
 const slides = [
   {
     text: "HyperSonic is the best place to kickstart your tech career. I developed strong fundamentals, DSA, and competitive programming skills.",
@@ -240,47 +237,43 @@ const slides = [
 
 export default function App() {
   return (
-    <div className="mt-6 p-16">
+    <div className="p-3">
       <SectionTitle
         title="Hear What"
         blueColorTitle="Our Students Say"
         description="Stories of growth and achievement from our students."
-        mainTitle={true} 
+        mainTitle={true}
         className="mt-16"
       />
       <Swiper
         navigation={true}
         pagination={{ clickable: true }}
-        speed={800} // Smooth transition speed
+        speed={800}
         effect="slide"
         grabCursor={true}
         centeredSlides={true}
         autoplay={{
-          delay: 3000, // Auto-slide every 3 seconds
-          disableOnInteraction: false, // Keeps autoplay running after user interaction
+          delay: 3000,
+          disableOnInteraction: false,
         }}
-        modules={[Navigation, Pagination, Autoplay]} // Include Autoplay module
+        modules={[Navigation, Pagination, Autoplay]}
         className="mySwiper"
         spaceBetween={30}
         slidesPerView={1}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="fade-in">
             <ContentForSliders {...slide} />
           </SwiperSlide>
         ))}
       </Swiper>
       <RequestCallbackButton alignRight={false} className="mt-4 mb-6" />
 
-      {/* ✅ Added Global Styles for Navigation Arrows */}
       <style jsx global>{`
         .mySwiper {
-          /* Customize arrow size */
           --swiper-navigation-size: 30px;
           --swiper-navigation-color: white;
           --swiper-theme-color: white;
-
-          /* Add smooth transition for animations */
           --swiper-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
@@ -291,69 +284,70 @@ export default function App() {
           justify-content: center;
           align-items: center;
           border-radius: 8px;
-
-          /* Smooth transition for slide transforms */
           transition: transform 0.5s ease, opacity 0.5s ease;
         }
 
-        /* Active slide styling */
         .swiper-slide-active {
-          transform: scale(1);
+          transform: scale(1.05);
           opacity: 1;
+          animation: fadeIn 0.6s ease-in-out;
         }
 
-        /* Non-active slide styling */
         .swiper-slide-prev,
         .swiper-slide-next {
           transform: scale(0.85);
           opacity: 0.7;
         }
 
-       /* ✅ Custom Navigation Arrows Closer Together */
-.swiper-button-next,
-.swiper-button-prev {
-  font-weight: bold;
-  background-color: #ccc; /* Light Gray Circle */
-  padding: 15px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px; /* Adjust size */
-  height: 45px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-/* ✅ Move the Arrows Closer (for Laptop & Tablet) */
-.swiper-button-prev {
-  left: 5%; /* Adjust position for larger screens */
-}
+        .swiper-button-next,
+        .swiper-button-prev {
+          font-weight: bold;
+          background-color: #ccc;
+          padding: 15px;
+          border-radius: 50%;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
+        }
 
-.swiper-button-next {
-  right: 5%; /* Adjust position for larger screens */
-}
+        .swiper-button-prev {
+          left: 5%;
+        }
+        .swiper-button-next {
+          right: 5%;
+        }
 
-/* ✅ Responsive Adjustments for Mobile Screens */
-@media (max-width: 768px) {
-  .swiper-button-prev {
-    left: 2%; /* Move arrow slightly inward */
-  }
-  .swiper-button-next {
-    right: 2%; /* Move arrow slightly inward */
-  }
-}
+        @media (max-width: 768px) {
+          .swiper-button-prev {
+            left: 2%;
+          }
+          .swiper-button-next {
+            right: 2%;
+          }
+        }
 
-
-        /* Ensure pagination bullets are visible with smooth transitions */
         .swiper-pagination-bullet {
           width: 10px;
           height: 10px;
-        
-          background: #0066ff; /* Changed from #ff6600 (orange) to #0066ff (blue) */
+          background: #0066ff;
           opacity: 0.2;
           transition: opacity 0.3s ease, transform 0.3s ease;
         }
