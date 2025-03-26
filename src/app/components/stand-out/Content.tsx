@@ -77,7 +77,7 @@ export function Contentsection() {
    
    <div>
         <motion.div 
-      className="flex flex-col md:flex-row gap-5 w-full"
+      className="flex flex-col md:flex-row gap-5 w-full"id="Why-Us"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

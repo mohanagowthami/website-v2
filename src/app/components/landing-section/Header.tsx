@@ -29,19 +29,19 @@ export const Header = () => {
 
       {/* Desktop Navigation with Tab Select */}
       <nav className="hidden sm:flex gap-6">
-        <div className="flex space-x-2 bg-gray-900 text-white p-2 rounded-lg">
+        <div className="flex space-x-2 bg-white text-white p-2 rounded-lg">
           {tabs.map((tab) => (
             <button
               key={tab.name}
               onClick={() => setSelectedTab(tab.name)}
               className={`relative px-4 py-2 text-sm font-medium ${
-                selectedTab === tab.name ? "text-white" : "text-gray-400"
+                selectedTab === tab.name ? "text-white" : "text-blue-900"
               }`}
             >
               {selectedTab === tab.name && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-pink-500 rounded-md"
+                  className="absolute inset-0 bg-blue-500 rounded-md"
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 />
               )}
@@ -52,10 +52,10 @@ export const Header = () => {
       </nav>
 
       {/* Mobile Menu Button */}
-      <div className="sm:hidden">
+      <div className="sm:hidden absolute right-4 top-3">
         <motion.button
           onClick={toggleMenu}
-          className="text-blue-400 focus:outline-none"
+          className="text-blue-900 focus:outline-none"
           whileTap={{ scale: 0.9 }}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -76,24 +76,24 @@ export const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="sm:hidden absolute top-full left-0 w-full bg-white border-t border-gray-300 p-4"
+            className="sm:hidden absolute top-full right-0 w-40 h-auto bg-white border-t border-gray-300 p-4"
           >
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-0.5">
               {tabs.map((tab) => (
                 <button
                   key={tab.name}
                   onClick={() => setSelectedTab(tab.name)}
-                  className={`relative px-4 py-2 text-sm font-medium ${
-                    selectedTab === tab.name ? "text-white" : "text-gray-400"
+                  className={`relative inline-block max-w-max px-3 py-1 text-sm font-medium ${
+                    selectedTab === tab.name ? "text-white" : "text-blue-900"
                   }`}
                 >
                   {selectedTab === tab.name && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-pink-500 rounded-md"
+                      className="absolute inset-0 bg-blue-500 rounded-md"
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     />
                   )}
