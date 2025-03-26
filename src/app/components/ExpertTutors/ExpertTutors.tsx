@@ -1,4 +1,4 @@
-import RequestCallbackButton from "@/Common/RequestCBButton";
+import RequestCallbackButton from "@/Common/RequestCallBackButton";
 import React from "react";
 
 const tutors = [
@@ -36,7 +36,7 @@ const tutors = [
 
 const ExpertTutors = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-10 bg-gray-50">
+    <div className="flex flex-col items-center justify-center p-30 bg-gray-50">
       <h2 className="text-2xl font-semibold text-gray-900 text-center">
         Meet Our Industry <span className="text-blue-600">Expert Tutors</span>
       </h2>

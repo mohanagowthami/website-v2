@@ -1,4 +1,4 @@
-import RequestCallbackButton from "./RequestCBButton"
+import RequestCallbackButton from "./RequestCallBackButton"
 
 
 import { AluminiComponent } from "./AluminiComponent";

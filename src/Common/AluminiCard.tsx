@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { SectionTitle } from "./SectionTitle";
-import RequestCallbackButton from "./RequestCBButton";
+import RequestCallbackButton from "./RequestCallBackButton";
 
 const people = [
   {
