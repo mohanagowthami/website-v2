@@ -41,12 +41,13 @@ const programs = [
 
 const Programs: React.FC = () => {
   return (
-<div className="w-full bg-[#fafdff] sm:px-6 sm:py-6 md:px-12 md:py-12 lg:px-15 lg:py-14 xl:px-24 xl:py-27">
+<div className="w-full bg-[#fafdff] px-6 py-6 md:px-12 md:py-12 lg:px-15 lg:py-14 xl:px-24 xl:py-27">
           <SectionTitle
                 mainTitle={true}
                 title="Choose Your Path to"
                 blueColorTitle="Success"
                 description="Explore programs built to transform your skills into career opportunities"
+                title1=""
               />
 
       {/* Programs Grid */}

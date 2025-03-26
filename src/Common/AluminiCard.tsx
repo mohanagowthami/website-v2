@@ -39,7 +39,7 @@ const AlumniCard = () => {
         Get insider tips from your seniors and gear up for your dream job!
       </p> */}
 
-      <SectionTitle  title=" Turn Your Dreams into Reality." description="Get insider tips from your seniors and gear up for your dream job!" blueColorTitle="The Journey Starts Here!"  mainTitle={true}/>
+      <SectionTitle  title=" Turn Your Dreams into Reality." description="Get insider tips from your seniors and gear up for your dream job!" blueColorTitle="The Journey Starts Here!" title1=""  mainTitle={true}/>
 
       {/* Scrolling Section */}
       <div className="relative w-full overflow-hidden mt-8">
