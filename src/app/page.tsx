@@ -8,7 +8,7 @@ import Programs from "./components/programs";
 import { LandingSection } from "./components/landing-section";
 import { FAQs } from "./components/faqs";
 import ExpertTutors from "./components/ExpertTutors/ExpertTutors";
-import RequestCallbackButton from "@/Common/RequestCBButton";
+import { TestimonalsSwiper } from "./components/testimonals";
 
 
 export default function Home() {
@@ -18,14 +18,16 @@ export default function Home() {
       
       
     <LandingSection/>
+    <TestimonalsSwiper/>
       
       <AluminiComponent/>
       <Programs/>
       <StandOut/>
+      <ExpertTutors/>
+    
       <FAQs/>
       <Footercomponent/>
-      <ExpertTutors/>
-      <div className="flex justify-end p-4"><RequestCallbackButton /></div>
+     
     </div>
   );
 }
