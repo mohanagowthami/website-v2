@@ -1,6 +1,6 @@
 
 
-import {Footercomponent} from "./components/footer";
+import {Footercomponent} from "./components/Footer";
 import { StandOut } from "./components/stand-out";
 
 import { LandingSection } from "./components/landing-section";
@@ -13,7 +13,7 @@ import Programs from "./components/courses/programs";
 
 export default function Home() {
   return (
-    <div>
+    <>
       
       
     <LandingSection/>
@@ -24,7 +24,9 @@ export default function Home() {
       <TestimonalsSwiper/>    
       <FAQs/>
       <Footercomponent/>
+      
+      </>
      
-    </div>
-  );
+    
+  ); 
 }
