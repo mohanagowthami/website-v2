@@ -10,15 +10,14 @@ export const Header = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  const navLinks = [
+  // Navigation Links (Also used for Tabs)
+  const tabs = [
     { name: "Home", href: "./#Home" },
     { name: "Programs", href: "./#program" },
     { name: "Why Us", href: "./#Why-Us" },
     { name: "Testimonials", href: "./#Testimonials" },
     { name: "FAQ’s", href: "./#Faq's" },
   ];
-
-  const tabs = ["Home", "React", "Vue", "Svelte"];
 
   return (
     <header className="flex flex-col sm:flex-row justify-between items-center px-6 py-3 md:px-12 bg-white border-b border-gray-300 fixed top-0 left-0 w-full z-50">
@@ -28,16 +27,31 @@ export const Header = () => {
         <p className="text-gray-500 text-xs">Training and Consultancy Services</p>
       </div>
 
-      {/* Navigation for Desktop */}
+      {/* Desktop Navigation with Tab Select */}
       <nav className="hidden sm:flex gap-6">
-        {navLinks.map((link, index) => (
-          <a key={index} href={link.href} className="text-[#53B0FD] text-[14px] font-semibold hover:text-blue-900">
-            {link.name}
-          </a>
-        ))}
+        <div className="flex space-x-2 bg-gray-900 text-white p-2 rounded-lg">
+          {tabs.map((tab) => (
+            <button
+              key={tab.name}
+              onClick={() => setSelectedTab(tab.name)}
+              className={`relative px-4 py-2 text-sm font-medium ${
+                selectedTab === tab.name ? "text-white" : "text-gray-400"
+              }`}
+            >
+              {selectedTab === tab.name && (
+                <motion.div
+                  layoutId="activeTab"
+                  className="absolute inset-0 bg-pink-500 rounded-md"
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                />
+              )}
+              <a href={tab.href} className="relative z-10">{tab.name}</a>
+            </button>
+          ))}
+        </div>
       </nav>
 
-      {/* Mobile Menu Button (Animated with Framer Motion) */}
+      {/* Mobile Menu Button */}
       <div className="sm:hidden">
         <motion.button
           onClick={toggleMenu}
@@ -58,49 +72,38 @@ export const Header = () => {
         </motion.button>
       </div>
 
-      {/* Mobile Menu Animation */}
+      {/* Mobile Menu with Tabs */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="sm:hidden absolute top-full left-0 w-full bg-white border-t border-gray-300"
+            className="sm:hidden absolute top-full left-0 w-full bg-white border-t border-gray-300 p-4"
           >
-            <nav className="flex flex-col gap-3 p-4">
-              {navLinks.map((link, index) => (
-                <a key={index} href={link.href} className="text-[#53B0FD] text-[14px] font-semibold hover:underline">
-                  {link.name}
-                </a>
+            <div className="flex flex-col gap-3">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.name}
+                  onClick={() => setSelectedTab(tab.name)}
+                  className={`relative px-4 py-2 text-sm font-medium ${
+                    selectedTab === tab.name ? "text-white" : "text-gray-400"
+                  }`}
+                >
+                  {selectedTab === tab.name && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-pink-500 rounded-md"
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    />
+                  )}
+                  <a href={tab.href} className="relative z-10">{tab.name}</a>
+                </button>
               ))}
-            </nav>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Tab Select Component */}
-      <div className="flex justify-center mt-3 sm:mt-0">
-        <div className="flex space-x-2 bg-gray-900 text-white p-2 rounded-lg">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setSelectedTab(tab)}
-              className={`relative px-4 py-2 text-sm font-medium ${
-                selectedTab === tab ? "text-white" : "text-gray-400"
-              }`}
-            >
-              {selectedTab === tab && (
-                <motion.div
-                  layoutId="activeTab"
-                  className="absolute inset-0 bg-pink-500 rounded-md"
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                />
-              )}
-              <span className="relative z-10">{tab}</span>
-            </button>
-          ))}
-        </div>
-      </div>
     </header>
   );
 };
