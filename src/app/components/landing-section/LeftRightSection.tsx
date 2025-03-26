@@ -80,7 +80,7 @@ import { SectionTitle } from "@/Common/SectionTitle";
 import { ContactForm } from "./index";
 import { useEffect, useRef } from "react";
 
-export const LeftRightSection = () => {
+export const LeftRightSection = () =>{
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -108,7 +108,7 @@ export const LeftRightSection = () => {
   }, []);
 
   return (
-    <div className="bg-white w-full p-6 py-12 md:p-12 lg:px-[100px] lg:py-[150px]">
+    <div className="bg-white w-full p-6 py-12 md:p-12 lg:px-[100px] lg:py-[150px]"id="Home">
       <style jsx global>{`
         @keyframes slide-in-left {
           from { transform: translateX(-50px); opacity: 0; }
@@ -192,7 +192,10 @@ export const LeftRightSection = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Let's get in touch</h2>
           <ContactForm/>
         </div>
+      
       </div>
+    
     </div>
+
   );
 };
