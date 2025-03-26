@@ -1,5 +1,11 @@
 
 export  function Footer() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
     return (
         <footer className="bg-[#0b0d17] text-white py-10 px-5 md:px-32 w-full ">
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl mx-auto">
