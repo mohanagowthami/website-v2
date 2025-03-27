@@ -50,7 +50,7 @@ const Programs: React.FC = () => {
   <SectionWrapper>
     <>
     <SectionTitle mainTitle={true} title="Choose Your Path to" blueColorTitle="Success" description="Explore programs built to transform your skills into career opportunities"/>
-    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="Program">
       {courses.map((course, index) => (
         <div key={index} className="border rounded-xl shadow-lg p-4 bg-white hover:shadow-xl transition duration-300">
           <img

@@ -1,70 +1,109 @@
-// export const Header = () => {
-//   return (
-//     <header className="flex flex-col sm:flex-row justify-between items-center px-5 sm:px-10 py-4 bg-white border-b border-gray-300 fixed top-0 left-0 z-50 w-full">
-//       {/* Logo Section */}
-//       <div className="text-center sm:text-left">
-//         <h1 className="text-[#175CD3] text-2xl md:text-3xl font-bold">HyperSonic</h1>
-//         <p className="text-[#98a1B2] text-sm md:text-base">Training and Consultancy Services</p>
-//       </div>
-
-//       {/* Navigation */}
-//       <nav className="mt-2 sm:mt-0">
-//         <ul className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
-//           <li><a href="#mainone" className="text-blue-500 text-sm md:text-base font-bold hover:underline scroll-mt-[100px]">Home</a></li>
-//           <li><a href="#programs" className="text-blue-500 text-sm md:text-base font-bold hover:underline scroll-mt-[100px]">Programs</a></li>
-//           <li><a href="#why-us" className="text-blue-500 text-sm md:text-base font-bold hover:underline scroll-mt-[100px]">Why Us</a></li>
-//           <li><a href="#testimonials" className="text-blue-500 text-sm md:text-base font-bold hover:underline scroll-mt-[100px]">Testimonials</a></li>
-//           <li><a href="#faqs" className="text-blue-500 text-sm md:text-base font-bold hover:underline scroll-mt-[100px]">FAQ's</a></li>
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// };
-
-
-
-
-// export const Header = () => {
-//   return (
-//     <header className="flex flex-col sm:flex-row justify-between items-center sm:px-16 px-4 py-5 bg-white border-b border-gray-300 fixed top-0 left-0 w-full z-50">
-//       {/* Logo Section */}
-//       <div className="text-center sm:text-left mb-4 sm:mb-0">
-//         <h1 className="text-[#175CD3] text-[35px] font-bold">HyperSonic</h1>
-//         <p className="text-[#98A1B2] text-[12px]">Training and Consultancy Services</p>
-//       </div>
-
-//       {/* Navigation */}
-//       <nav>
-//         <ul className="flex flex-wrap justify-center gap-4 sm:gap-6">
-//           <li><a href="#mainone" className="text-[#53B0FD] text-[12px] font-semibold hover:underline">Home</a></li>
-//           <li><a href="#programs" className="text-[#53B0FD] text-[12px] font-semibold hover:underline">Programs</a></li>
-//           <li><a href="#why-us" className="text-[#53B0FD] text-[12px] font-semibold hover:underline">Why Us</a></li>
-//           <li><a href="#testimonials" className="text-[#53B0FD] text-[12px] font-semibold hover:underline">Testimonials</a></li>
-//           <li><a href="#faqs" className="text-[#53B0FD] text-[12px] font-semibold hover:underline">FAQ's</a></li>
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// };
-
+"use client";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedTab, setSelectedTab] = useState("Home");
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  // Navigation Links (Also used for Tabs)
+  const tabs = [
+    { name: "Home", href: "./#Home" },
+    { name: "Programs", href: "./#program" },
+    { name: "Why Us", href: "./#Why-Us" },
+    { name: "Testimonials", href: "./#Testimonials" },
+    { name: "FAQ’s", href: "./#Faq's" },
+  ];
+
   return (
-    <header className="flex flex-col sm:flex-row justify-between items-center sm:px-16 px-4 py-3 bg-white border-b border-gray-300 fixed top-0 left-0 w-full z-50">
+    <header className="flex flex-col sm:flex-row justify-between items-center px-6 py-3 md:px-12 bg-white border-b border-gray-300 fixed top-0 left-0 w-full z-50">
       {/* Logo Section */}
-      <div className="text-center sm:text-left mb-4 sm:mb-0">
-        <h1 className="text-[#175CD3] text-[34px] font-bold">HyperSonic</h1>
-        <p className="text-gray-500 text-[12px]">Training and Consultancy Services</p>
+      <div className="text-left">
+        <h1 className="text-[#175CD3] text-4xl font-bold">HyperSonic</h1>
+        <p className="text-gray-500 text-xs">Training and Consultancy Services</p>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex flex-wrap justify-center gap-4 sm:gap-6">
-        <a href="./#hero" className="text-blue-400 text-[16px] font-semibold hover:underline">Home</a>
-        <a href="./#programs" className="text-blue-400 text-[16px] font-semibold hover:underline">Programs</a>
-        <a href="./#why-hypersonicc" className="text-blue-400 text-[16px] font-semibold hover:underline">Why Us</a>
-        <a href="./#testimonials" className="text-blue-400 text-[16px] font-semibold hover:underline">Testimonials</a>
-        <a href="./#faqs" className="text-blue-400 text-[16px] font-semibold hover:underline">FAQ’s</a>
+      {/* Desktop Navigation with Tab Select */}
+      <nav className="hidden sm:flex gap-6">
+        <div className="flex space-x-2 bg-white text-white p-2 rounded-lg">
+          {tabs.map((tab) => (
+            <button
+              key={tab.name}
+              onClick={() => setSelectedTab(tab.name)}
+              className={`relative px-4 py-2 text-sm font-medium ${
+                selectedTab === tab.name ? "text-white" : "text-blue-900"
+              }`}
+            >
+              {selectedTab === tab.name && (
+                <motion.div
+                  layoutId="activeTab"
+                  className="absolute inset-0 bg-blue-500 rounded-md"
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                />
+              )}
+              <a href={tab.href} className="relative z-10">{tab.name}</a>
+            </button>
+          ))}
+        </div>
       </nav>
+
+      {/* Mobile Menu Button */}
+      <div className="sm:hidden absolute right-4 top-3">
+        <motion.button
+          onClick={toggleMenu}
+          className="text-blue-900 focus:outline-none"
+          whileTap={{ scale: 0.9 }}
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <motion.path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.3 }}
+            />
+          </svg>
+        </motion.button>
+      </div>
+
+      {/* Mobile Menu with Tabs */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="sm:hidden absolute top-full right-0 w-40 h-auto bg-white border-t border-gray-300 p-4"
+          >
+            <div className="flex flex-col gap-0.5">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.name}
+                  onClick={() => setSelectedTab(tab.name)}
+                  className={`relative inline-block max-w-max px-3 py-1 text-sm font-medium ${
+                    selectedTab === tab.name ? "text-white" : "text-blue-900"
+                  }`}
+                >
+                  {selectedTab === tab.name && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="absolute inset-0 bg-blue-500 rounded-md"
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    />
+                  )}
+                  <a href={tab.href} className="relative z-10">{tab.name}</a>
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

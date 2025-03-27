@@ -57,7 +57,9 @@ const faqs = [
   };
 
   return (
-    <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 py-8">
+   
+
+    <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 py-8 "id="Faq's">
       {/* FAQ Title */}
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-6">
         Have <span className="text-blue-600">Questions?</span>
@@ -90,6 +92,7 @@ const faqs = [
         ))}
       </div>
     </div>
+
   );
 }
 
