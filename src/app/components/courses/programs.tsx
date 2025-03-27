@@ -43,55 +43,14 @@ const programs = [
 
 const Programs: React.FC = () => {
   return (
-    <div className="programs-container w-full bg-[#fafdff] sm:px-6 sm:py-6 md:px-12 md:py-12 lg:px-15 lg:py-14 xl:px-24 xl:py-27 overflow-hidden">
-      <style jsx global>{`
-        @keyframes slide-in-left {
-          0% {
-            transform: translateX(-100%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-        @keyframes slide-in-right {
-          0% {
-            transform: translateX(100%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-        @keyframes slide-in-top {
-          0% {
-            transform: translateY(-100%);
-            opacity: 0;
-          }
-          100% {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-        .animate-slide-in-left {
-          animation: slide-in-left 0.5s ease-out forwards;
-        }
-        .animate-slide-in-right {
-          animation: slide-in-right 0.5s ease-out forwards;
-        }
-        .animate-slide-in-top {
-          animation: slide-in-top 0.5s ease-out forwards;
-        }
-      `}</style>
-
-      <SectionTitle
-        mainTitle={true}
-        title="Choose Your Path to"
-        blueColorTitle="Success"
-        description="Explore programs built to transform your skills into career opportunities"
-      />
+<div className="w-full bg-[#fafdff] px-6 py-6 md:px-12 md:py-12 lg:px-15 lg:py-14 xl:px-24 xl:py-27"id="program">
+          <SectionTitle
+                mainTitle={true}
+                title="Choose Your Path to"
+                blueColorTitle="Success"
+                description="Explore programs built to transform your skills into career opportunities"
+                title1=""
+              />
 
       {/* Programs Grid */}
       <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5">
