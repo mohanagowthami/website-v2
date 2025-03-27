@@ -1,8 +1,8 @@
 import RequestCallbackButton from "./RequestCallBackButton"
+import { SectionTitle } from "./SectionTitle";
+import { SectionWrapper } from "./SectionWrapper";
 
 
-import { AluminiComponent } from "./AluminiComponent";
-
-export {AluminiComponent,RequestCallbackButton}
+export {RequestCallbackButton,SectionWrapper,SectionTitle}
 
 
