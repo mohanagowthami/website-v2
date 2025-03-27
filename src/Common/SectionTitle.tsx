@@ -1,4 +1,3 @@
-import { main } from "framer-motion/m"
 
 interface SectionTitleType {
     title: string,

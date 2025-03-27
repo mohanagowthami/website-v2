@@ -1,4 +1,4 @@
-import RequestCallbackButton from "@/Common/RequestCBButton";
+import RequestCallbackButton from "@/Common/RequestCallBackButton";
 import React from "react";
 
 const tutors = [
