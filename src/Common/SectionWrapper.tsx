@@ -1,4 +1,4 @@
-import RequestCallbackButton from "./RequestCBButton"
+
 
 
 export const SectionWrapper = ({ cs, children }: { cs?: string, children: any }) => {
@@ -8,7 +8,7 @@ export const SectionWrapper = ({ cs, children }: { cs?: string, children: any })
             children
         }
         <div className="flex flex-row-reverse">
-        <RequestCallbackButton/>
+        
      </div>
 
     </div>
