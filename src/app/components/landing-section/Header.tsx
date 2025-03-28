@@ -20,16 +20,19 @@ export const Header = () => {
   ];
 
   return (
-    <header className="flex flex-col sm:flex-row justify-between items-center px-6 py-3 md:px-12 bg-white border-b border-gray-300 fixed top-0 left-0 w-full z-50">
-      {/* Logo Section */}
+    <header className="flex flex-col items-start sm:flex-row justify-between px-2 py-2 md:px-12 bg-white border-b border-gray-300 fixed top-0 left-0 w-full z-50">
+    {/* Logo Section */}
+    <div className="flex items-center gap-2"> {/* Changed gap to 2 (0.5rem) and added flex items-center */}
+      <img src="/logo-wbg.svg" alt="HyperSonic Logo" className="h-10 w-auto" /> {/* Removed mr-2 */}
       <div className="text-left">
-        <h1 className="text-[#175CD3] text-4xl font-bold">HyperSonic</h1>
+        <h1 className="text-[#175CD3] text-[30px] font-bold">HyperSonic</h1>
         <p className="text-gray-500 text-xs">Training and Consultancy Services</p>
       </div>
-
+    </div>
+  
       {/* Desktop Navigation with Tab Select */}
       <nav className="hidden sm:flex gap-6">
-        <div className="flex space-x-2 bg-white text-white p-2 rounded-lg">
+        <div className="flex space-x-3 text-white p-2 rounded-lg">
           {tabs.map((tab) => (
             <button
               key={tab.name}
@@ -52,7 +55,7 @@ export const Header = () => {
       </nav>
 
       {/* Mobile Menu Button */}
-      <div className="sm:hidden absolute right-4 top-3">
+      <div className="sm:hidden absolute right-4 top-5.5">
         <motion.button
           onClick={toggleMenu}
           className="text-blue-900 focus:outline-none"
