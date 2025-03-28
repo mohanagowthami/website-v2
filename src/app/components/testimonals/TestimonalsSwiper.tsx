@@ -270,7 +270,7 @@ export default function App() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <RequestCallbackButton alignRight={false} className="mt-4 mb-6" />
+      <RequestCallbackButton position="center" />
 
       <style jsx global>{`
         .mySwiper {
