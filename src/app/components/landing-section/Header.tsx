@@ -15,7 +15,7 @@ export const Header = () => {
     { name: "Programs", id: "programs" },
     { name: "Why Us", id: "why-us" },
     { name: "Testimonials", id: "testimonials" },
-    { name: "FAQ's", id: "faqs" },
+    { name: "FAQ's", id: "faq's" },
   ];
 
   const scrollToSection = (id: string) => {
