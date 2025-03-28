@@ -1,6 +1,5 @@
 "use client";
-
-import { SectionTitle } from "@/Common";
+import { SectionTitle } from "@/Common/SectionTitle";
 import { ContactForm } from "./index";
 
 export const LeftRightSection = () => {
@@ -10,7 +9,7 @@ export const LeftRightSection = () => {
         
         {/* Left Section */}
         <div className="space-y-6">
-          <SectionTitle
+          <SectionTitle 
             title="Level Up Your Skills and"  
             blueColorTitle="Land Your Dream Job"  
             description="Master industry-standard skills through expert-led teaching, hands-on training, real-world projects, and personalized mentorship." 

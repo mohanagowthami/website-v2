@@ -12,6 +12,7 @@ import { Footercomponent } from "./components/footer";
 import { AluminiComponent } from "./components/placements";
 
 
+
 export default function Home() {
   return (
     <>
