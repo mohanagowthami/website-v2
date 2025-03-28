@@ -13,6 +13,7 @@ export const LeftRightSection = () => {
             title="Level Up Your Skills and"  
             blueColorTitle="Land Your Dream Job"  
             description="Master industry-standard skills through expert-led teaching, hands-on training, real-world projects, and personalized mentorship." 
+            title1=""
           />
 
           <div className="bg-white p-[28px] rounded-[20px] border border-[#e4e7ec] xl:max-w-[85%] 2xl:max-w-[78%]">

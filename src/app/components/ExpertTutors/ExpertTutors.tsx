@@ -1,68 +1,162 @@
-import RequestCallbackButton from "@/Common/RequestCallBackButton";
+"use client";
+
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import { SectionTitle } from "@/Common/SectionTitle";
+import { RequestCallbackButton } from "@/Common";
 
 const tutors = [
   {
     name: "Gajula Mohana Gowthami",
     role: "Staff Engineer",
     company: "Nagarro",
-    image: "https://framerusercontent.com/images/b6PqaRUjoYVyfpDkLpOOA8QBTwI.png", // Replace with actual image
+    image: "GajulaMohanaGowthami.png",
   },
   {
     name: "Gajula Srinivas",
     role: "Business Analyst",
     company: "Amazon",
-    image: "https://framerusercontent.com/images/6xqqLKcrbkyGMDZw0XiZbe8Gk.png",
+    image: "GajulaSrinivas.png",
   },
   {
     name: "Mahesh",
     role: "Deloitte",
     company: "",
-    image:"https://framerusercontent.com/images/2oq8up7E2vNDCIxS8LsOKezWZw.png"
+    image: "Mahesh.png",
   },
   {
     name: "Kone Srikanth",
     role: "Manager",
     company: "State Street",
-    image: "https://framerusercontent.com/images/JziXUfzkl6IbgPDdVwCL3czPWg.png"
+    image: "KoneSrikanth.png",
   },
   {
     name: "Somaraju",
     role: "",
     company: "",
-    image: "https://framerusercontent.com/images/7Bx2giihmFBa3Qzq3K3e9fXYYM.png",
+    image: "Somaraju.png",
   },
 ];
 
 const ExpertTutors = () => {
   return (
-    <div className="flex flex-col items-center justify-center p-30 bg-gray-50">
-      <h2 className="text-2xl font-semibold text-gray-900 text-center">
-        Meet Our Industry <span className="text-blue-600">Expert Tutors</span>
-      </h2>
-      <p className="text-gray-600 mb-6 text-center">
-        Learn from professionals working at top tech companies.
-      </p>
-
-      {/* First Row - Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {tutors.slice(0, 5).map((tutor, index) => (
-          <div key={index} className="flex flex-col items-center text-center">
-            <img
-              src={tutor.image}
-              alt={tutor.name}
-              className="w-24 h-24 rounded-full object-cover"
-            />
-            <h3 className="mt-3 font-semibold text-gray-900">{tutor.name}</h3>
-            {tutor.role && <p className="text-gray-600 text-sm">{tutor.role}</p>}
-            {tutor.company && <p className="text-gray-500 text-sm">{tutor.company}</p>}
-          </div>
+    <div className="flex flex-col items-center justify-center bg-white text-blue-900 py-12 px-4 relative">
+     <div className="mb-10"> <SectionTitle
+                      mainTitle={true}
+                      title="Meet Our Industry"
+                      blueColorTitle="Expert Tutors"
+                      description="Learn from professionals working at top tech companies."
+                      title1=""
+                    />
+                    </div>
+      <Swiper
+        navigation={true}
+        pagination={{ clickable: true }}
+        speed={800}
+        grabCursor={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={20}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="w-full max-w-6xl"
+      >
+        {tutors.map((tutor, index) => (
+          <SwiperSlide key={index}>
+            <div className=" border-blue-100 rounded-xl p-5  hover:shadow-lg transition duration-300 flex flex-col items-center text-center h-[260px] w-[240px] mx-auto">
+              <img
+                src={tutor.image}
+                alt={tutor.name}
+                className="w-30 h-30 rounded-full  mb-3"
+              />
+              <h3 className="text-base font-semibold text-blue-900">
+                {tutor.name}
+              </h3>
+              <p className="text-sm text-blue-600 min-h-[20px]">
+                {tutor.role || "—"}
+              </p>
+              <p className="text-sm text-blue-500 min-h-[20px]">
+                {tutor.company || "—"}
+              </p>
+            </div>
+          </SwiperSlide>
         ))}
-      </div>
-<div className="text-[rgb(102,112,132)] leading-[30px] text-[15px]">and more...</div>
-<RequestCallbackButton/>
+      </Swiper>
+
+      <div className="text-blue-700 mt-6 text-sm italic">and more...</div>  
+      <div className="absolute right-4 bottom-4 ">
+  <RequestCallbackButton />
+</div>
+
+      {/* Custom styles for Swiper buttons and pagination */}
+            <style jsx global>{`
+        .swiper-button-next,
+        .swiper-button-prev {
+          font-weight: bold;
+          background-color: #eff8ff ; /* Add a background color if needed */
+          padding: 10px; /* Adjust padding for the button */
+          border-radius: 50%;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px; /* Button size */
+          height: 30px; /* Button size */
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
+        }
+      
+        .swiper-button-prev {
+          left: 5%;
+        }
+      
+        .swiper-button-next {
+          right: 5%;
+        }
+      
+        /* Adjust the inner arrow size */
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 12px; /* Reduce the arrow size */
+        }
+      
+        @media (max-width: 768px) {
+          .swiper-button-prev {
+            left: 2%;
+          }
+          .swiper-button-next {
+            right: 2%;
+          }
+        }
+      
+        .swiper-pagination-bullet {
+          width:5px;
+          height: 5px;
+          background: #0066ff;
+          opacity: 0.2;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+      
+        .swiper-pagination-bullet-active {
+          opacity: 0.8;
+          transform: scale(1.2);
+        }
+      `}</style>
     </div>
-  
   );
 };
 
