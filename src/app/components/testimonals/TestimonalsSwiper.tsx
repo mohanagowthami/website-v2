@@ -245,6 +245,7 @@ export default function App() {
         title="Hear What"
         blueColorTitle="Our Students Say"
         description="Stories of growth and achievement from our students."
+        title1=""
         mainTitle={true}
         className="mt-16"
       />

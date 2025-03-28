@@ -1,6 +1,5 @@
 
 
-
 import { StandOut } from "./components/stand-out";
 
 import { LandingSection } from "./components/landing-section";
