@@ -107,8 +107,8 @@ export function Contentsection() {
         
       </div>
       
-    </motion.div>
-    <div className="flex justify-end"><RequestCallbackButton/></div>
+    </motion.div><br/>
+    <RequestCallbackButton position="left"/>
     </div>
   );
 }

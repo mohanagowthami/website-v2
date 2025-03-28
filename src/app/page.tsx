@@ -4,7 +4,7 @@ import { StandOut } from "./components/stand-out";
 
 import { LandingSection } from "./components/landing-section";
 import { FAQs } from "./components/faqs";
-import ExpertTutors from "./components/ExpertTutors/ExpertTutors";
+import ExpertTutors from "./components/experttutors/ExpertTutors";
 import { TestimonalsSwiper } from "./components/testimonals";
 
 import Programs from "./components/courses/programs";
@@ -15,9 +15,7 @@ import { AluminiComponent } from "./components/placements";
 export default function Home() {
   return (
     <>
-      
-      
-    <LandingSection/>
+      <LandingSection/>
       <AluminiComponent/>
       <Programs/>
       <StandOut/>
@@ -25,9 +23,6 @@ export default function Home() {
       <TestimonalsSwiper/>    
       <FAQs/>
       <Footercomponent/>
-      
       </>
-     
-    
   ); 
 }
