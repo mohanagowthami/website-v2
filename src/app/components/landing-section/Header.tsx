@@ -10,103 +10,148 @@ export const Header = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  // Navigation Links (Also used for Tabs)
   const tabs = [
-    { name: "Home", href: "./#Home" },
-    { name: "Programs", href: "./#program" },
-    { name: "Why Us", href: "./#Why-Us" },
-    { name: "Testimonials", href: "./#Testimonials" },
-    { name: "FAQ’s", href: "./#Faq's" },
+    { name: "Home", id: "Home" },
+    { name: "Programs", id: "program" },
+    { name: "Why Us", id: "Why-Us" },
+    { name: "Testimonials", id: "Testimonials" },
+    { name: "FAQ's", id: "Faq's" },
   ];
 
-  return (
-    <header className="flex flex-col items-start sm:flex-row justify-between px-2 py-2 md:px-12 bg-white border-b border-gray-300 fixed top-0 left-0 w-full z-50">
-    {/* Logo Section */}
-    <div className="flex items-center gap-2"> {/* Changed gap to 2 (0.5rem) and added flex items-center */}
-      <img src="/logo-wbg.svg" alt="HyperSonic Logo" className="h-10 w-auto" /> {/* Removed mr-2 */}
-      <div className="text-left">
-        <h1 className="text-[#175CD3] text-[30px] font-bold">HyperSonic</h1>
-        <p className="text-gray-500 text-xs">Training and Consultancy Services</p>
-      </div>
-    </div>
-  
-      {/* Desktop Navigation with Tab Select */}
-      <nav className="hidden sm:flex gap-6">
-        <div className="flex space-x-3 text-white p-2 rounded-lg">
-          {tabs.map((tab) => (
-            <button
-              key={tab.name}
-              onClick={() => setSelectedTab(tab.name)}
-              className={`relative px-4 py-2 text-sm font-medium ${
-                selectedTab === tab.name ? "text-white" : "text-blue-900"
-              }`}
-            >
-              {selectedTab === tab.name && (
-                <motion.div
-                  layoutId="activeTab"
-                  className="absolute inset-0 bg-blue-500 rounded-md"
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                />
-              )}
-              <a href={tab.href} className="relative z-10">{tab.name}</a>
-            </button>
-          ))}
-        </div>
-      </nav>
+  const scrollToSection = (id: string) => {
+    setSelectedTab(id);
+    const target = document.getElementById(id);
+    
+    if (target) {
+      let offset = 50; // Default offset for the header
 
-      {/* Mobile Menu Button */}
-      <div className="sm:hidden absolute right-4 top-5.5">
-        <motion.button
+      // Adjust offset based on section-specific needs
+      switch (id) {
+        case "Testimonials":
+          offset = 70;
+          break;
+        case "Faqs":
+          offset = 60;
+          break;
+        case "program":
+          offset = 50;
+          break;
+        case "Why-Us":
+          offset = 100;
+          break;
+        default:
+          offset = 50;
+      }
+
+      window.scrollTo({
+        top: target.offsetTop - offset,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <>
+      <header className="flex items-center justify-between px-4 py-3 sm:px-6 md:px-8 lg:px-12 bg-white border-b border-gray-300 fixed top-0 left-0 w-full z-50">
+        {/* Logo Section */}
+        <div className="flex items-center gap-2">
+          <img 
+            src="/logo-wbg.svg" 
+            alt="HyperSonic Logo" 
+            className="h-8 sm:h-9 md:h-10 w-auto" 
+          />
+          <div className="text-left">
+            <h1 className="text-[#175CD3] text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-bold leading-tight">
+              HyperSonic
+            </h1>
+            <p className="text-gray-500 text-[10px] sm:text-xs">
+              Training and Consultancy Services
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop Navigation - Optimized for 672-750px */}
+        <nav className="hidden sm:flex">
+          <div className="flex gap-1 sm:gap-2 md:gap-4">
+            {tabs.map((tab) => (
+              <button
+                key={tab.name}
+                onClick={() => scrollToSection(tab.id)}
+                className={`relative px-2 sm:px-3 py-1 sm:py-2 text-xs sm:text-sm ${
+                  selectedTab === tab.id ? "text-white" : "text-blue-900"
+                }`}
+              >
+                {selectedTab === tab.id && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute inset-0 bg-blue-500 rounded-md"
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  />
+                )}
+                <span className="relative z-10 whitespace-nowrap">{tab.name}</span>
+              </button>
+            ))}
+          </div>
+        </nav>
+
+        {/* Mobile Menu Button - Shows below sm breakpoint */}
+        <button
           onClick={toggleMenu}
-          className="text-blue-900 focus:outline-none"
-          whileTap={{ scale: 0.9 }}
+          className="sm:hidden text-blue-900 focus:outline-none"
+          aria-label="Toggle menu"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <motion.svg 
+            className="w-6 h-6" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+            animate={isMenuOpen ? "open" : "closed"}
+          >
             <motion.path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
-              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 0.3 }}
+              strokeWidth={2}
+              variants={{
+                closed: { d: "M4 6h16M4 12h16M4 18h16" },
+                open: { d: "M6 18L18 6M6 6l12 12" }
+              }}
+              transition={{ duration: 0.2 }}
             />
-          </svg>
-        </motion.button>
-      </div>
+          </motion.svg>
+        </button>
 
-      {/* Mobile Menu with Tabs */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="sm:hidden absolute top-full right-0 w-40 h-auto bg-white border-t border-gray-300 p-4"
-          >
-            <div className="flex flex-col gap-0.5">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.name}
-                  onClick={() => setSelectedTab(tab.name)}
-                  className={`relative inline-block max-w-max px-3 py-1 text-sm font-medium ${
-                    selectedTab === tab.name ? "text-white" : "text-blue-900"
-                  }`}
-                >
-                  {selectedTab === tab.name && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute inset-0 bg-blue-500 rounded-md"
-                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    />
-                  )}
-                  <a href={tab.href} className="relative z-10">{tab.name}</a>
-                </button>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className="sm:hidden absolute top-full left-0 right-0 bg-white shadow-md border-t border-gray-200"
+            >
+              <div className="flex flex-col p-2">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.name}
+                    onClick={() => {
+                      scrollToSection(tab.id);
+                      setIsMenuOpen(false);
+                    }}
+                    className={`px-4 py-3 text-sm font-medium text-left ${
+                      selectedTab === tab.id 
+                        ? "bg-blue-100 text-blue-700" 
+                        : "text-gray-700 hover:bg-gray-50"
+                    }`}
+                  >
+                    {tab.name}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+    </>
   );
 };

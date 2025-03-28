@@ -8,9 +8,9 @@ export const LandingSection=()=>{
     <Header/>
     
     <div className="pt-[120px] sm:pt-[100px] md:pt-[20px] lg:pt-[40px]">
-            <LeftRightSection/>
-            </div>
-            </>
+    <LeftRightSection/>
+    </div>
+    </>
 
 }
 

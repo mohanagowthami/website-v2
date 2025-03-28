@@ -1,4 +1,5 @@
-import RequestCallbackButton from "@/Common/RequestCBButton";
+
+import { RequestCallbackButton } from "@/Common";
 import React from "react";
 
 const tutors = [
@@ -16,8 +17,8 @@ const tutors = [
   },
   {
     name: "Mahesh",
-    role: "Deloitte",
-    company: "",
+    role: "",
+    company: "Deloitte",
     image:"https://framerusercontent.com/images/2oq8up7E2vNDCIxS8LsOKezWZw.png"
   },
   {
@@ -60,7 +61,9 @@ const ExpertTutors = () => {
         ))}
       </div>
 <div className="text-[rgb(102,112,132)] leading-[30px] text-[15px]">and more...</div>
-<RequestCallbackButton/>
+<div className="mt-6 flex justify-end w-full">
+  <RequestCallbackButton position="right" />
+</div>
     </div>
   
   );

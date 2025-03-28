@@ -210,7 +210,10 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { SectionTitle } from "@/Common/SectionTitle";
 import { ContentForSliders } from "./ContentForSliders";
-import RequestCallbackButton from "@/Common/RequestCBButton";
+import { RequestCallbackButton } from "@/Common/index";
+
+
+
 
 const slides = [
   {
@@ -237,11 +240,12 @@ const slides = [
 
 export default function App() {
   return (
-    <div className="p-3">
+    <div className="p-3" id="Testimonials">
       <SectionTitle
         title="Hear What"
         blueColorTitle="Our Students Say"
         description="Stories of growth and achievement from our students."
+        title1=""
         mainTitle={true}
         className="mt-16"
       />
@@ -267,7 +271,7 @@ export default function App() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <RequestCallbackButton alignRight={false} className="mt-4 mb-6" />
+      <RequestCallbackButton position="center" />
 
       <style jsx global>{`
         .mySwiper {
