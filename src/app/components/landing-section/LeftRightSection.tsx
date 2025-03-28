@@ -1,32 +1,14 @@
 "use client";
 import { SectionTitle } from "@/Common/SectionTitle";
 import { ContactForm } from "./index";
-import { motion } from "framer-motion";
-
-const fadeInLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const fadeInRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0 },
-};
 
 export const LeftRightSection = () => {
   return (
     <div className="bg-white w-full p-6 py-12 md:p-12 lg:px-[100px] lg:py-[150px]">
       <div className="max-w-[90%] sm:max-w-[83%] md:max-w-[75%] lg:max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[15%]">
         
-        {/* Left Section - Slide from left on scroll */}
-        <motion.div
-          variants={fadeInLeft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="space-y-6"
-        >
+        {/* Left Section */}
+        <div className="space-y-6">
           <SectionTitle 
             title="Level Up Your Skills and"  
             blueColorTitle="Land Your Dream Job"  
@@ -75,20 +57,13 @@ export const LeftRightSection = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Right Section - Slide from right on scroll */}
-        <motion.div
-          variants={fadeInRight}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 lg:max-w-[95%] xl:max-w-[95%]"
-        >
+        {/* Right Section */}
+        <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 lg:max-w-[95%] xl:max-w-[95%]">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Let's get in touch</h2>
           <ContactForm />
-        </motion.div>
+        </div>
       </div>
     </div>
   );

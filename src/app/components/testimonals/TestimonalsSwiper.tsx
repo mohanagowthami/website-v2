@@ -240,7 +240,7 @@ const slides = [
 
 export default function App() {
   return (
-    <div className="p-3">
+    <div className="p-3" id="Testimonials">
       <SectionTitle
         title="Hear What"
         blueColorTitle="Our Students Say"
