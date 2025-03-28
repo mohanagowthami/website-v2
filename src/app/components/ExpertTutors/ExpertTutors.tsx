@@ -74,7 +74,7 @@ const ExpertTutors = () => {
       >
         {tutors.map((tutor, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white border border-blue-100 rounded-xl p-5  hover:shadow-lg transition duration-300 flex flex-col items-center text-center h-[260px] w-[240px] mx-auto">
+            <div className=" border-blue-100 rounded-xl p-5  hover:shadow-lg transition duration-300 flex flex-col items-center text-center h-[260px] w-[240px] mx-auto">
               <img
                 src={tutor.image}
                 alt={tutor.name}
