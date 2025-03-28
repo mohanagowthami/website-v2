@@ -1,4 +1,5 @@
 "use client"
+import { SectionWrapper } from "@/Common";
 import { SectionTitle } from "@/Common/SectionTitle";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -58,14 +59,11 @@ const Programs: React.FC = () => {
 
 
   return (
-<div className="w-full bg-[#fafdff] px-6 py-6 md:px-12 md:py-12 lg:px-15 lg:py-14 xl:px-24 xl:py-27"id="programs">
-          <SectionTitle
-                mainTitle={true}
-                title="Choose Your Path to"
+<SectionWrapper cs=""  requestCBAlign="left" title="Choose Your Path to"
                 blueColorTitle="Success"
                 description="Explore programs built to transform your skills into career opportunities"
-                title1=""
-              />
+                title1="">
+          
 
       {/* Programs Grid */}
       <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5">
@@ -132,7 +130,7 @@ const Programs: React.FC = () => {
           );
         })}
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 

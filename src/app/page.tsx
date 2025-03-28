@@ -8,7 +8,7 @@ import ExpertTutors from "./components/ExpertTutors/ExpertTutors";
 import { TestimonalsSwiper } from "./components/testimonals";
 
 import Programs from "./components/courses/programs";
-import { Footercomponent } from "./components/Footer";
+import { Footercomponent } from "./components/footer";
 import { AluminiComponent } from "./components/placements";
 
 
