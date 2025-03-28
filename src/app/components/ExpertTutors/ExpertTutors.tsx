@@ -1,12 +1,13 @@
 "use client";
 
+import RequestCallbackButton from "@/Common/RequestCallBackButton";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import RequestCallbackButton from "@/Common/RequestCBButton";
+
 import { SectionTitle } from "@/Common/SectionTitle";
 
 const tutors = [

@@ -7,8 +7,10 @@ import { LandingSection } from "./components/landing-section";
 import { FAQs } from "./components/faqs";
 import ExpertTutors from "./components/ExpertTutors/ExpertTutors";
 import { TestimonalsSwiper } from "./components/testimonals";
-import { AluminiComponent } from "@/Common";
+
 import Programs from "./components/courses/programs";
+
+import { AluminiComponent } from "./components/placements";
 
 
 export default function Home() {
