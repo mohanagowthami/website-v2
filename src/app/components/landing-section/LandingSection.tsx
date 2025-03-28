@@ -7,7 +7,7 @@ export const LandingSection=()=>{
     
     <Header/>
     
-    <div className="pt-[120px] sm:pt-[100px] md:pt-[20px] lg:pt-[40px]">
+    <div className="pt-[120px] sm:pt-[100px] md:pt-[20px] lg:pt-[40px]" id="home">
     <LeftRightSection/>
     </div>
     </>
