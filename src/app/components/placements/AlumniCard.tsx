@@ -1,7 +1,7 @@
 'use client'
+import { SectionTitle } from "@/Common";
 import Image from "next/image";
-import { SectionTitle } from "./SectionTitle";
-import RequestCallbackButton from "./RequestCBButton";
+
 
 const people = [
   {
@@ -27,7 +27,7 @@ const people = [
   },
 ];
 
-const AlumniCard = () => {
+export const AlumniCard = () => {
   return (
     <div className="text-center py-10 bg-[#FBFCFC] w-full ">
       {/* Heading */}
@@ -100,4 +100,4 @@ const AlumniCard = () => {
 
 
 
-export default AlumniCard;
+
