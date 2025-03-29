@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-interface RequestCallbackButtonProps {
+interface RequestCallbackButtonProp {
   position?: "left" | "center" | "right"; // optional prop
 }
 
-const RequestCallbackButton = ({ position = "left" }: RequestCallbackButtonProps) => {
+const RequestCallbackButton = ({ position = "left" }: RequestCallbackButtonProp) => {
   // Determine alignment class based on prop
   const alignmentClass =
     position === "center" ? "justify-center" :

@@ -1,6 +1,6 @@
 "use client"
 import { SectionWrapper } from "@/Common";
-import { SectionTitle } from "@/Common/SectionTitle";
+
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 

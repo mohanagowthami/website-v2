@@ -1,6 +1,6 @@
 "use client";
 
-import RequestCallbackButton from "@/Common/RequestCallBackButton";
+import RequestCallbackButton from "@/Common/RequestCallbackButton";
 import { motion } from "framer-motion";
 
 const features = [
