@@ -1,4 +1,4 @@
-import RequestCallbackButton from "./RequestCallBackButton"
+import RequestCallbackButton from "./RequestCallbackButton"
 import { SectionTitle } from "./SectionTitle";
 import { SectionWrapper } from "./SectionWrapper";
 

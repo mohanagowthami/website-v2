@@ -25,8 +25,8 @@ const tutors = [
   },
   {
     name: "Mahesh",
-    role: "Deloitte",
-    company: "",
+    role: "",
+    company: "Deloitte",
     image: "Mahesh.png",
   },
   {
@@ -51,7 +51,7 @@ const ExpertTutors = () => {
                       title="Meet Our Industry"
                       blueColorTitle="Expert Tutors"
                       description="Learn from professionals working at top tech companies."
-                      title1=""
+                      
                     />
                     </div>
       <Swiper

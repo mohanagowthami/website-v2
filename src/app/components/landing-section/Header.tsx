@@ -60,12 +60,20 @@ export const Header = () => {
           className="h-8 sm:h-9 md:h-10 w-auto" 
         />
         <div className="text-left">
-          <h1 className="text-[#175CD3] text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-bold leading-tight">
+          {/* <h1 className="text-[#175CD3] sm:text-[34px] md:text-[30px] lg:text-[38px] font-bold leading-tight">
             HyperSonic
-          </h1>
-          <p className="text-gray-500 text-[9.27528px]">
+          </h1> */}
+          <h1 className="text-[#175CD3] text-[26px] sm:text-[30px] md:text-[32px] lg:text-[38px] font-bold leading-tight">
+  HyperSonic
+</h1>
+
+          {/* <p className="text-gray-500 sm: md:text-[7px] lg:text-[10px]">
             CONSULTANCY SERVICES PRIVATE LIMITED
-          </p>
+          </p> */}
+          <p className="text-gray-500 text-[10px] sm:text-[10px] md:text-[12px] lg:text-[12px]">
+  CONSULTANCY SERVICES PRIVATE LIMITED
+</p>
+
         </div>
       </div>
 
