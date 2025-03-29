@@ -63,8 +63,8 @@ export const Header = () => {
           <h1 className="text-[#175CD3] text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-bold leading-tight">
             HyperSonic
           </h1>
-          <p className="text-gray-500 text-[10px] sm:text-xs">
-            Training and Consultancy Services
+          <p className="text-gray-500 text-[9.27528px]">
+            CONSULTANCY SERVICES PRIVATE LIMITED
           </p>
         </div>
       </div>
