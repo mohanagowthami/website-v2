@@ -45,9 +45,9 @@ export default function App() {
     <SectionWrapper
              
               sectionTitleProps={{
-                title: "Meet Our Industry ",
-                blueColorTitle: "Expert Tutors",
-                description: "Learn from professionals working at top tech companies.",
+                title: "Hear What  ",
+                blueColorTitle: "Our Students Say",
+                description: "Stories of growth and achievement from our students.",
                 id: "section-id",
                  requestCBAlign: "center"
               }}    

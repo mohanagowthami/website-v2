@@ -23,24 +23,24 @@ export const Header = () => {
     const target = document.getElementById(id);
     
     if (target) {
-      let offset = 50; // Default offset for the header
+      let offset = 150; // Default offset for the header
 
       // Adjust offset based on section-specific needs
       switch (id) {
         case "testimonials":
-          offset = 70;
+          offset = 250;
           break;
         case "faqs":
-          offset = 60;
+          offset = 300;
           break;
         case "programs":
-          offset = 50;
+          offset = 250;
           break;
         case "why-us":
-          offset = 100;
+          offset = 200;
           break;
         default:
-          offset = 50;
+          offset = 150;
       }
 
       window.scrollTo({
