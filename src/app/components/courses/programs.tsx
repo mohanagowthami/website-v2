@@ -59,13 +59,6 @@ const Programs: React.FC = () => {
 
 
   return (
-<<<<<<< HEAD
-    <SectionWrapper>
-   <SectionTitle  cs="" mainTitle={true}  title="Choose Your Path to"  description="Explore programs built to transform your skills into career opportunities" blueColorTitle="Success"
-                title1="Choose Your Path"/>
-          
-  );
-=======
 <SectionWrapper cs=""  
         sectionTitleProps={{
           title: "Choose Your Path to ",
@@ -76,7 +69,6 @@ const Programs: React.FC = () => {
         showRequestCallbackButton={false}
                              >
 
->>>>>>> 1368cf4380d02907e4f22df728048029be1cbe61
       {/* Programs Grid */}
       <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5 " id="programs">
         {programs.map((program, index) => {

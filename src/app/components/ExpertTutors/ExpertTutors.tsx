@@ -57,16 +57,6 @@ const ExpertTutors = () => {
           >
     <div className="flex flex-col items-center justify-center bg-white text-blue-900 py-12 px-4 relative">
      <div className="mb-10"> 
-<<<<<<< HEAD
-      <SectionTitle
-                      mainTitle={true}
-                      title="Meet Our Industry"
-                      blueColorTitle="Expert Tutors"
-                      description="Learn from professionals working at top tech companies."
-                      
-                    />
-=======
->>>>>>> 1368cf4380d02907e4f22df728048029be1cbe61
                     </div>
       <Swiper
         navigation={true}

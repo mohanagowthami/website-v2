@@ -57,10 +57,6 @@ const faqs = [
   };
 
   return (
-<<<<<<< HEAD
-   
-    <section id="faqs">
-=======
       <SectionWrapper
                 
                  sectionTitleProps={{
@@ -73,11 +69,11 @@ const faqs = [
            
                  >
 
->>>>>>> 1368cf4380d02907e4f22df728048029be1cbe61
     <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 py-8 "id="faq's">
      
 
       {/* FAQ Container */}
+      <section id="faqs">
       <div className="w-full max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto space-y-4">
         {faqs.map((faq, index) => (
           <div
@@ -111,12 +107,9 @@ const faqs = [
           </a>
         </p>
       </div>
+      </section>
     </div>
-<<<<<<< HEAD
-    </section >
-=======
     </SectionWrapper>
->>>>>>> 1368cf4380d02907e4f22df728048029be1cbe61
   );
 }
 
