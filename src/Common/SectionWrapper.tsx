@@ -13,6 +13,7 @@ interface SectionWrapperProps {
     mainTitle?: boolean;
     className?: string;
     id: string;
+    titleAlign?: "left" | "center" | "right"; // New
   };
 }
 
