@@ -1,6 +1,7 @@
 'use client'
+import { SectionTitle } from "@/Common";
 import Image from "next/image";
-import { SectionTitle } from "./SectionTitle";
+
 
 const people = [
   {
@@ -26,21 +27,10 @@ const people = [
   },
 ];
 
-const AlumniCard = () => {
+export const AlumniCard = () => {
   return (
     <div className="text-center py-10 bg-[#FBFCFC] w-full ">
-      {/* Heading */}
-      {/* <h2 className="text-[26px] md:text-[30px] lg:text-[36px] font-bold px-4">
-        Turn Your Dreams into Reality.{" "}
-        <span className="text-blue-600">The Journey Starts Here!</span>
-      </h2>
-      <p className="text-gray-600 mt-2 text-[14px] md:text-[16px] px-4">
-        Get insider tips from your seniors and gear up for your dream job!
-      </p> */}
-
-      <SectionTitle  title=" Turn Your Dreams into Reality." description="Get insider tips from your seniors and gear up for your dream job!" blueColorTitle="The Journey Starts Here!"  mainTitle={true}/>
-
-      {/* Scrolling Section */}
+{/* Scrolling Section */}
       <div className="relative w-full overflow-hidden mt-8">
         <div className="flex gap-6 w-max animate-scroll p-13">
           {people.concat(people).map((person, index) => (
@@ -92,10 +82,11 @@ const AlumniCard = () => {
           animation: scroll 16s linear infinite;
         }
       `}</style>
+      
     </div>
   );
 };
 
 
 
-export default AlumniCard;
+

@@ -1,119 +1,173 @@
-"use client"
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
 
-// import required modules
-import { Navigation, Pagination, EffectFade } from 'swiper/modules';
+
+"use client";
+
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { SectionWrapper } from "@/Common/index";
+import { ContentForSliders } from "./ContentForSliders";
+
+
+
+
+
+const slides = [
+  {
+    text: "HyperSonic is the best place to kickstart your tech career. I developed strong fundamentals, DSA, and competitive programming skills.",
+    name: "Saranya",
+    logo: "https://framerusercontent.com/images/VrwRahe6Ka2cQDaaCU3HWKOtb8.png"
+  },
+  {
+    text: "Joining HyperSonic was a game-changer for my tech journey. The hands-on projects and expert mentorship helped me master coding and problem-solving.",
+    name: "Karuna",
+    logo: "https://framerusercontent.com/images/aN7jyMTdiCoEnnnZADRPlIgup4c.png"
+  },
+  {
+    text: "HyperSonic provided me with the perfect blend of theory and practice. I now feel confident tackling real-world challenges in tech.",
+    name: "Shanmukh",
+    logo: "https://framerusercontent.com/images/5VrRN2hqwpYzt6FN7DspXmGGoKU.png"
+  },
+  {
+    text: "The hands-on projects at HyperSonic gave me the confidence to apply my skills in real-world scenarios. I am now excelling in my job.",
+    name: "Gayathri",
+    logo: "https://framerusercontent.com/images/R16UOF6HwNzM3IPiDERvnDXJagw.png"
+  }
+];
 
 export default function App() {
   return (
-    <>
+
+    <SectionWrapper
+             
+              sectionTitleProps={{
+                title: "Meet Our Industry ",
+                blueColorTitle: "Expert Tutors",
+                description: "Learn from professionals working at top tech companies.",
+                id: "section-id",
+                 requestCBAlign: "center"
+              }}    
+              showRequestCallbackButton={true}
+        
+              >
+    <div className="p-3" id="testimonials">
       <Swiper
         navigation={true}
-        pagination={{
-          clickable: true,
+        pagination={{ clickable: true }}
+        speed={800}
+        effect="slide"
+        grabCursor={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
         }}
-        // Add smooth slide transitions
-        speed={800} // Control the speed of the transition (in ms)
-        effect="slide" // Use "slide" for horizontal sliding (or "fade", "cube", "coverflow", "flip" for different effects)
-        
-        // Optional smooth transition settings
-        grabCursor={true} // Changes cursor to grabbing hand during slide
-        centeredSlides={true} // Centers active slide
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         className="mySwiper"
         spaceBetween={30}
         slidesPerView={1}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index} className="fade-in">
+            <ContentForSliders {...slide} />
+          </SwiperSlide>
+        ))}
       </Swiper>
+
 
       <style jsx global>{`
         .mySwiper {
-          width: 100%;
-          height: 400px;
-          margin: 20px 0;
-          
-          /* Customize arrow size here */
           --swiper-navigation-size: 30px;
-          --swiper-navigation-color: #ff6600;
-          --swiper-theme-color: #ff6600;
-          
-          /* Add smooth transition for all animations */
+          --swiper-navigation-color: white;
+          --swiper-theme-color: white;
           --swiper-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
         }
-        
+
         .swiper-slide {
           text-align: center;
           font-size: 18px;
-          background: #f8f8f8;
           display: flex;
           justify-content: center;
           align-items: center;
-          border: 1px solid #ddd;
           border-radius: 8px;
-          
-          /* Add smooth transition for slide transforms */
           transition: transform 0.5s ease, opacity 0.5s ease;
         }
-        
-        /* Active slide styling */
+
         .swiper-slide-active {
-          transform: scale(1);
+          transform: scale(1.05);
           opacity: 1;
+          animation: fadeIn 0.6s ease-in-out;
         }
-        
-        /* Non-active slide styling */
-        .swiper-slide-prev, .swiper-slide-next {
+
+        .swiper-slide-prev,
+        .swiper-slide-next {
           transform: scale(0.85);
           opacity: 0.7;
         }
-        
-        /* Additional styling for navigation arrows */
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         .swiper-button-next,
         .swiper-button-prev {
           font-weight: bold;
-          background-color: rgba(255, 255, 255, 0.5);
-          padding: 20px;
+          background-color: #ccc;
+          padding: 15px;
           border-radius: 50%;
           transition: background-color 0.3s ease, transform 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 10;
         }
-        
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-          background-color: rgba(255, 255, 255, 0.8);
-          transform: scale(1.1);
+
+        .swiper-button-prev {
+          left: 5%;
         }
-        
-        /* Ensure pagination bullets are visible with smooth transitions */
+        .swiper-button-next {
+          right: 5%;
+        }
+
+        @media (max-width: 768px) {
+          .swiper-button-prev {
+            left: 2%;
+          }
+          .swiper-button-next {
+            right: 2%;
+          }
+        }
+
         .swiper-pagination-bullet {
           width: 10px;
           height: 10px;
-          background: #ff6600;
-          opacity: 0.5;
+          background: #0066ff;
+          opacity: 0.2;
           transition: opacity 0.3s ease, transform 0.3s ease;
         }
-        
+
         .swiper-pagination-bullet-active {
-          opacity: 1;
+          opacity: 0.8;
           transform: scale(1.2);
         }
       `}</style>
-    </>
+    </div>
+    </SectionWrapper>
   );
 }
