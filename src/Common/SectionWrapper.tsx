@@ -1,34 +1,15 @@
-// import RequestCallbackButton from "./RequestCallBackButton"
-
-
-
-// export const SectionWrapper = ({ cs, children }: { cs?: string, children: any }) => {
-
-//     return <div className={`p-6 md:p-12 lg:px-[56px] lg:py-[60px] ${cs? cs:""} `}>
-//          <div  className="custom-font-roboto">
-//             {children}
-//             </div>
-    
-//         <div className="flex flex-row-reverse ">
-//         <RequestCallbackButton/>
-//      </div>
-
-//     </div>
-// }
-
-
-
-
-import RequestCallbackButton from "./RequestCallbackButton"
-import {SectionTitle} from "./SectionTitle"
+import RequestCallbackButton from "./RequestCallBackButton";
+import { SectionTitle } from "./SectionTitle";
 
 interface SectionWrapperProps {
   cs?: string;
   children: React.ReactNode;
+  showRequestCallbackButton?: boolean;
   sectionTitleProps?: {
     title: string;
     blueColorTitle?: string;
     description: string;
+    requestCBAlign?: "left" | "center" | "right"; // Added alignment option
     mainTitle?: boolean;
     className?: string;
     id: string;
@@ -38,8 +19,15 @@ interface SectionWrapperProps {
 export const SectionWrapper = ({
   cs,
   children,
+  showRequestCallbackButton = true,
   sectionTitleProps
 }: SectionWrapperProps) => {
+  // Determine alignment class based on prop
+  const alignmentClass =
+    sectionTitleProps?.requestCBAlign === "center" ? "justify-center" :
+    sectionTitleProps?.requestCBAlign === "right" ? "justify-end" :
+    "justify-start";
+
   return (
     <div className={`p-6 md:p-12 lg:px-[56px] lg:py-[60px] ${cs ? cs : ""}`}>
       {sectionTitleProps && (
@@ -48,9 +36,11 @@ export const SectionWrapper = ({
       <div className="custom-font-roboto">
         {children}
       </div>
-      <div className="flex flex-row-reverse">
-        <RequestCallbackButton />
-      </div>
+      {showRequestCallbackButton && (
+        <div className={`flex ${alignmentClass}`}>
+          <RequestCallbackButton />
+        </div>
+      )}
     </div>
   );
 };

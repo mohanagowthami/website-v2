@@ -6,9 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
-import { SectionTitle } from "@/Common/SectionTitle";
-import { RequestCallbackButton } from "@/Common";
+import { SectionWrapper } from "@/Common";
 
 const tutors = [
   {
@@ -45,8 +43,21 @@ const tutors = [
 
 const ExpertTutors = () => {
   return (
+    <SectionWrapper
+         
+          sectionTitleProps={{
+            title: "Meet Our Industry ",
+            blueColorTitle: "Expert Tutors",
+            description: "Learn from professionals working at top tech companies.",
+            id: "section-id",
+            requestCBAlign: "right"
+          }}    
+          showRequestCallbackButton={true}
+          
+          >
     <div className="flex flex-col items-center justify-center bg-white text-blue-900 py-12 px-4 relative">
      <div className="mb-10"> 
+<<<<<<< HEAD
       <SectionTitle
                       mainTitle={true}
                       title="Meet Our Industry"
@@ -54,6 +65,8 @@ const ExpertTutors = () => {
                       description="Learn from professionals working at top tech companies."
                       
                     />
+=======
+>>>>>>> 1368cf4380d02907e4f22df728048029be1cbe61
                     </div>
       <Swiper
         navigation={true}
@@ -82,13 +95,13 @@ const ExpertTutors = () => {
                 alt={tutor.name}
                 className="w-30 h-30 rounded-full  mb-3"
               />
-              <h3 className="text-base font-semibold text-blue-900">
+              <h3 className="text-base font-semibold text-gray-900">
                 {tutor.name}
               </h3>
-              <p className="text-sm text-blue-600 min-h-[20px]">
+              <p className="text-sm text-gray-800 min-h-[20px]">
                 {tutor.role || "—"}
               </p>
-              <p className="text-sm text-blue-500 min-h-[20px]">
+              <p className="text-sm text-gray-500 min-h-[20px]">
                 {tutor.company || "—"}
               </p>
             </div>
@@ -97,9 +110,7 @@ const ExpertTutors = () => {
       </Swiper>
 
       <div className="text-blue-700 mt-6 text-sm italic">and more...</div>  
-      <div className="absolute right-4 bottom-4 ">
-  <RequestCallbackButton />
-</div>
+     
 
       {/* Custom styles for Swiper buttons and pagination */}
             <style jsx global>{`
@@ -158,6 +169,7 @@ const ExpertTutors = () => {
         }
       `}</style>
     </div>
+    </SectionWrapper>
   );
 };
 

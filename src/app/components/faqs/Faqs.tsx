@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import { SectionWrapper } from "@/Common";
 const faqs = [
   {
     question: "Am I eligible for this course if I am from a non-technical background?",
@@ -57,13 +57,25 @@ const faqs = [
   };
 
   return (
+<<<<<<< HEAD
    
     <section id="faqs">
+=======
+      <SectionWrapper
+                
+                 sectionTitleProps={{
+                   title: "Have",
+                   blueColorTitle: "Questions",
+                   description: "",
+                   id: "section-id",
+                 }}    
+                 showRequestCallbackButton={false}
+           
+                 >
+
+>>>>>>> 1368cf4380d02907e4f22df728048029be1cbe61
     <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 py-8 "id="faq's">
-      {/* FAQ Title */}
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-6">
-        Have <span className="text-blue-600">Questions?</span>
-      </h2><br />
+     
 
       {/* FAQ Container */}
       <div className="w-full max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto space-y-4">
@@ -100,7 +112,11 @@ const faqs = [
         </p>
       </div>
     </div>
+<<<<<<< HEAD
     </section >
+=======
+    </SectionWrapper>
+>>>>>>> 1368cf4380d02907e4f22df728048029be1cbe61
   );
 }
 

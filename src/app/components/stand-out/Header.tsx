@@ -1,16 +1,12 @@
+import { SectionWrapper } from "@/Common";
 import { SectionTitle } from "@/Common/SectionTitle";
 
 export  function Heading() {
     return (
+      
+      
       <div >
       <div className="mb-6 md:mb-12 lg:mb-16">
-      <SectionTitle
-                   mainTitle={true}
-                   title="What Makes"
-                   blueColorTitle="HyperSonicc"
-                   description="A Personalized learning experience that blends mentorship, flexbility, and job ready-skills."
-                   title1=" Stand Out?"
-                 />
                  </div>
                 <div className="mb-5 md:mb-8 lg:mb-12">
                  <h1 className="text-lg md:text-lg lg:text-[22px] xl:text-2xl text-[#344053] font-bold">

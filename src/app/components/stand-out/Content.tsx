@@ -1,6 +1,6 @@
 "use client";
 
-import RequestCallbackButton from "@/Common/RequestCallbackButton";
+
 import { motion } from "framer-motion";
 
 const features = [
@@ -108,7 +108,7 @@ export function Contentsection() {
       </div>
       
     </motion.div><br/>
-    <RequestCallbackButton position="left"/>
+    
     </div>
   );
 }
