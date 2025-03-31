@@ -79,6 +79,7 @@ import { ContactForm } from "./index";
 
 export const LeftRightSection = () => {
   return (
+    <section id="contact-us">
     <SectionWrapper
       cs="bg-white"
       sectionTitleProps={{
@@ -147,6 +148,7 @@ export const LeftRightSection = () => {
         </div>
       </div>
     </SectionWrapper>
+    </section>
   );
 };
 

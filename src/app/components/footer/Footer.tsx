@@ -1,10 +1,18 @@
-
+'use client'
+import { motion } from "framer-motion";
 export  function Footer() {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToSection = (id: string) => {
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const yOffset = -80; // Adjust if there's a fixed navbar
+        const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        window.history.pushState(null, "", `#${id}`);
+      } else {
+        console.warn("Element not found: ", id);
+      }
+    }, 100);
   };
     return (
         <footer className="bg-[#0b0d17] text-white py-10 px-5 md:px-32 w-full ">
@@ -43,18 +51,55 @@ export  function Footer() {
 
     {/* Get Help */}
     <div className="space-y-3 mt-5">
-      <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6] lg:text-[16px]">Get Help</h4>
-      <p className="text-[#2E90FA] font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">FAQ's</p>
-      <p className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">Contact Us</p>
-    </div>
+          <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6] lg:text-[16px]">
+            Get Help
+          </h4>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-[#2E90FA] font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("faqs")}
+          >
+            FAQ's
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("contact-us")}
+          >
+            Contact Us
+          </motion.p>
+        </div>
 
-    {/* Programs */}
-    <div className="space-y-2 mt-5">
-      <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6]">Programs</h4>
-      <p className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">Cyber Security</p>
-      <p className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">Soft Skills</p>
-      <p className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">Full-Stack Development</p>
-    </div>
+     {/* Programs */}
+        <div className="space-y-2 mt-5">
+          <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6]">Programs</h4>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("backend-development")}
+          >
+            Cyber Security
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("soft-skills")}
+          >
+            Soft Skills
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("full-stack-development")}
+          >
+            Full-Stack Development
+          </motion.p>
+        </div>
 
     {/* Contact Us */}
     <div className="space-y-5 mt-5">

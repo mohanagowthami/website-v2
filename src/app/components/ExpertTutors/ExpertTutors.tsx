@@ -46,7 +46,8 @@ const tutors = [
 const ExpertTutors = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-white text-blue-900 py-12 px-4 relative">
-     <div className="mb-10"> <SectionTitle
+     <div className="mb-10"> 
+      <SectionTitle
                       mainTitle={true}
                       title="Meet Our Industry"
                       blueColorTitle="Expert Tutors"

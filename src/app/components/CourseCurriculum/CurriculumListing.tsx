@@ -20,8 +20,10 @@ const CurriculumListing: React.FC = () => {
   const [activeWeek, setActiveWeek] = useState<number | null>(null);
 
   const coursesData: CoursesData = {
+   
     frontend: {
       title: "Frontend",
+      
       weeks: [
         {
           title: "Week 1: HTML5 & CSS3 Fundamentals",
@@ -34,6 +36,7 @@ const CurriculumListing: React.FC = () => {
             "Weekend Project: Build a simple personal profile page with a responsive layout using HTML5 and CSS3."
           ]
         },
+        
         {
           title: "Week 2: Advanced CSS3 & Introduction to Tailwind CSS",
           days: [
@@ -91,6 +94,17 @@ const CurriculumListing: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto p-4">
       {Object.entries(coursesData).map(([courseKey, course]) => (
+        <section 
+        key={courseKey} 
+        id={
+          courseKey === "backend" ? "backend-development" 
+          : courseKey === "softskills" ? "soft-skills" 
+          : courseKey === "frontend" ? "full-stack-development" 
+          : undefined
+        } 
+        className="mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-sm"
+      >
+  
         <div key={courseKey} className="mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-sm">
           <div 
             className="flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors duration-200"
@@ -130,8 +144,11 @@ const CurriculumListing: React.FC = () => {
             </div>
           )}
         </div>
+        </section>
       ))}
+      
     </div>
+   
   );
 };
 

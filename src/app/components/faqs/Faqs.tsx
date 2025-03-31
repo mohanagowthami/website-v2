@@ -58,7 +58,7 @@ const faqs = [
 
   return (
    
-
+    <section id="faqs">
     <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 py-8 "id="faq's">
       {/* FAQ Title */}
       <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-center mb-6">
@@ -100,7 +100,7 @@ const faqs = [
         </p>
       </div>
     </div>
-
+    </section >
   );
 }
 
