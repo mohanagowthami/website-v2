@@ -52,6 +52,7 @@ export const contactFormSubmission = async (formData: formDataType) => {
     }
 
     catch (error: any) {
+        console.log(error)
 
         return { success: false, message: "Something went wrong, please try again!" }
 

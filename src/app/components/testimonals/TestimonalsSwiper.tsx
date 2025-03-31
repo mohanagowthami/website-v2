@@ -240,7 +240,7 @@ const slides = [
 
 export default function App() {
   return (
-    <div className="p-3">
+    <div className="p-3" id="testimonials">
       <SectionTitle
         title="Hear What"
         blueColorTitle="Our Students Say"
@@ -271,7 +271,7 @@ export default function App() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <RequestCallbackButton alignRight={false} className="mt-4 mb-6" />
+      <RequestCallbackButton position="center" />
 
       <style jsx global>{`
         .mySwiper {

@@ -7,7 +7,7 @@ export const AluminiComponent=()=>{
   return (
     <SectionWrapper cs="bg-[#FBFCFC]">
       <AlumniCard/>
-      <RequestCallbackButton/>
+      <RequestCallbackButton position="right"/>
     </SectionWrapper>
   );
 }

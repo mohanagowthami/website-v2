@@ -1,34 +1,28 @@
-
-
-import {Footercomponent} from "./components/footer";
+import { Footercomponent } from "./components/footer";
 import { StandOut } from "./components/stand-out";
 
 import { LandingSection } from "./components/landing-section";
 import { FAQs } from "./components/faqs";
-import ExpertTutors from "./components/ExpertTutors/ExpertTutors";
+
 import { TestimonalsSwiper } from "./components/testimonals";
 
 import Programs from "./components/courses/programs";
 
 import { AluminiComponent } from "./components/placements";
+import { ExpertTutors } from "./components/ExpertTutors";
 
 
 export default function Home() {
   return (
     <>
-      
-      
-    <LandingSection/>
-      <AluminiComponent/>
-      <Programs/>
-      <StandOut/>
-      <ExpertTutors/>
-      <TestimonalsSwiper/>    
-      <FAQs/>
-      <Footercomponent/>
-      
-      </>
-     
-    
-  ); 
+      <LandingSection />
+      <AluminiComponent />
+      <Programs />
+      <StandOut />
+      <ExpertTutors />
+      <TestimonalsSwiper />
+      <FAQs />
+      <Footercomponent />
+    </>
+  );
 }

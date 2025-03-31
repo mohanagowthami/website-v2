@@ -1,6 +1,5 @@
 "use client";
 
-import RequestCallbackButton from "@/Common/RequestCallBackButton";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -9,6 +8,8 @@ import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import { SectionTitle } from "@/Common/SectionTitle";
+import RequestCallbackButton from "@/Common/RequestCallbackButton";
+
 
 const tutors = [
   {
@@ -25,8 +26,8 @@ const tutors = [
   },
   {
     name: "Mahesh",
-    role: "Deloitte",
-    company: "",
+    role: "",
+    company: "Deloitte",
     image: "Mahesh.png",
   },
   {
@@ -51,7 +52,7 @@ const ExpertTutors = () => {
                       title="Meet Our Industry"
                       blueColorTitle="Expert Tutors"
                       description="Learn from professionals working at top tech companies."
-                      title1=""
+                      
                     />
                     </div>
       <Swiper
