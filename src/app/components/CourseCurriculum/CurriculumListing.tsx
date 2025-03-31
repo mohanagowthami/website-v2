@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
 
 interface Week {
@@ -95,7 +95,7 @@ const CurriculumListing: React.FC = () => {
           <div 
             className="flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 cursor-pointer transition-colors duration-200"
             onClick={() => toggleCourse(courseKey)}
-          >
+            >
             <h2 className="text-lg font-semibold text-gray-800">{course.title}</h2>
             <span className="text-gray-600 font-bold text-xl">
               {activeCourse === courseKey ? '−' : '+'}

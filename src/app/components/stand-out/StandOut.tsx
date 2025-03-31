@@ -15,11 +15,12 @@ export const StandOut = () => {
     requestCBAlign: "left"
    }}    
   showRequestCallbackButton={true}
-   
+  cs="bg-[#FBFCFC]"
    >
-    <div className="  w-full px-6 py-6 md:px-12 md:py-12 lg:px-15 lg:py-14 xl:px-24 xl:py-27" id="why-us">
+      
+
       <Heading />
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 "id="why-us">
         <div>
           <Contentsection />
         </div>
@@ -28,7 +29,7 @@ export const StandOut = () => {
           <Imagesection />
         </div>
       </div>
-    </div>
+     
     </SectionWrapper>
   );
 };

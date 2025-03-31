@@ -1,16 +1,30 @@
+'use client'
+import { motion } from "framer-motion";
+
 
 export  function Footer() {
-  const scrollToSection = (id) => {
+  
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const yOffset = -180; // Adjust this if needed
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+      console.log(`Scrolling to: ${id}`); // Debugging
+    } else {
+      console.log(`Element with id '${id}' not found!`); // Debugging
     }
   };
+  
+  
     return (
+      
         <footer className="bg-[#0b0d17] text-white py-10 px-5 md:px-32 w-full ">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl mx-auto">
+
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-15 w-full max-w-7xl mx-auto">
     {/* Company Info */}
-    <div className="space-y-5">
+    <div className="space-y-5 mb-10">
       <h1 className="text-[14px] md:text-[18px]  lg:text-[38.7397px] font-bold text-blue-500">HyperSonic.</h1>
       <p className="text-[12px] md:text-[14px] text-[#f2f3f6] lg:text-[16px]">Training and Consultancy services</p>
       <h2 className="mt-6 text-[14px] md:text-[16px] font-semibold text-[#f2f3f6] lg:text-[16px]">Reach us</h2>
@@ -42,24 +56,61 @@ export  function Footer() {
     </div>
 
     {/* Get Help */}
-    <div className="space-y-3 mt-5">
-      <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6] lg:text-[16px]">Get Help</h4>
-      <p className="text-[#2E90FA] font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">FAQ's</p>
-      <p className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">Contact Us</p>
-    </div>
+    <div className="space-y-3  mt-5">
+          <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6] lg:text-[16px]">
+            Get Help
+          </h4>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-[#2E90FA] font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("faqs")}
+          >
+            FAQ's
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("contact-us")}
+          >
+            Contact Us
+          </motion.p>
+        </div>
 
-    {/* Programs */}
-    <div className="space-y-2 mt-5">
-      <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6]">Programs</h4>
-      <p className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">Cyber Security</p>
-      <p className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">Soft Skills</p>
-      <p className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]">Full-Stack Development</p>
-    </div>
+     {/* Programs */}
+        <div className="space-y-2 mt-5">
+          <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6]">Programs</h4>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("backend-development")}
+          >
+            Cyber Security
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("soft-skills")}
+          >
+            Soft Skills
+          </motion.p>
+          <motion.p
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+            onClick={() => scrollToSection("full-stack-development")}
+          >
+            Full-Stack Development
+          </motion.p>
+        </div>
 
     {/* Contact Us */}
     <div className="space-y-5 mt-5">
       <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6]">Contact Us</h4>
-      <div className="flex items-center space-x-3 mt-3">
+      <div className="flex space-x-3 mt-3">
         <img
           src="location-icon.svg"
           className="w-6 h-6"

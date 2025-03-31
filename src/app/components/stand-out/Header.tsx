@@ -1,5 +1,4 @@
-import { SectionWrapper } from "@/Common";
-import { SectionTitle } from "@/Common/SectionTitle";
+
 
 export  function Heading() {
     return (
