@@ -59,11 +59,15 @@ const Programs: React.FC = () => {
 
 
   return (
-<SectionWrapper cs=""  requestCBAlign="left" title="Choose Your Path to"
-                blueColorTitle="Success"
-                description="Explore programs built to transform your skills into career opportunities"
-                title1="">
-          
+<SectionWrapper cs=""  
+        sectionTitleProps={{
+          title: "Choose Your Path to ",
+          blueColorTitle: "Sucess",
+          description: "Explore programs built to transform your skills into career opportunities.",
+          id: "section-id",
+        }}    
+        showRequestCallbackButton={false}
+                             >
 
       {/* Programs Grid */}
       <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5">
@@ -80,6 +84,7 @@ const Programs: React.FC = () => {
 
           return (
             <div 
+            id="programs"
               key={index} 
               className={`p-5 rounded-[20px] border-[#e4e7ec] border-1 bg-[#fff] flex flex-col ${animationClass}`}
             >
