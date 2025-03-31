@@ -73,6 +73,7 @@ const faqs = [
      
 
       {/* FAQ Container */}
+      <section id="faqs">
       <div className="w-full max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto space-y-4">
         {faqs.map((faq, index) => (
           <div
@@ -106,6 +107,7 @@ const faqs = [
           </a>
         </p>
       </div>
+      </section>
     </div>
     </SectionWrapper>
   );

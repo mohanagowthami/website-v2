@@ -1,5 +1,5 @@
 "use client"
-import { SectionWrapper } from "@/Common";
+import { SectionTitle , SectionWrapper } from "@/Common";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -70,7 +70,7 @@ const Programs: React.FC = () => {
                              >
 
       {/* Programs Grid */}
-      <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5">
+      <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5 " id="programs">
         {programs.map((program, index) => {
           // Different animations for each card
           let animationClass = "";
@@ -135,7 +135,7 @@ const Programs: React.FC = () => {
           );
         })}
       </div>
-    </SectionWrapper>
+      </SectionWrapper>
   );
 };
 
