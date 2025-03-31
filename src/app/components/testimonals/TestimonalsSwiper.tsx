@@ -52,7 +52,7 @@ export default function App() {
                  requestCBAlign: "center"
               }}    
               showRequestCallbackButton={true}
-        
+        cs="bg-gray-100"
               >
     <div className="p-3" id="testimonials">
       <Swiper
