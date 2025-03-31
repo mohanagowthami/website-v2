@@ -29,7 +29,7 @@ const people = [
 
 export const AlumniCard = () => {
   return (
-    <div className="text-center py-10 bg-[#FBFCFC] w-full ">
+    <div className="text-center py-10 bg-gray-100 w-full ">
 {/* Scrolling Section */}
       <div className="relative w-full overflow-hidden mt-8">
         <div className="flex gap-6 w-max animate-scroll p-13">
