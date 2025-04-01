@@ -8,14 +8,14 @@ export const StandOut = () => {
    <SectionWrapper
    
    sectionTitleProps={{
-    title: "Choose Your Path to ",
-    blueColorTitle: "Sucess",
-    description: "Explore programs built to transform your skills into career opportunities.",
+    title: "What Makes  ",
+    blueColorTitle: "HyperSonicc",
+    description: "A personalized learning experience that blends mentorship, flexibility, and job-ready skills.",
     id: "section-id",
     requestCBAlign: "left"
    }}    
   showRequestCallbackButton={true}
-  cs="bg-[#FBFCFC]"
+  cs="bg-gray-100"
    >
       
 

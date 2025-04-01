@@ -37,7 +37,7 @@ export const Header = () => {
           offset = 250;
           break;
         case "why-us":
-          offset = 200;
+          offset = 370;
           break;
         default:
           offset = 150;
