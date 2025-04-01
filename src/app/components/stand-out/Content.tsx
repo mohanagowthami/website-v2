@@ -1,5 +1,6 @@
 "use client";
 
+
 import { motion } from "framer-motion";
 
 const features = [
@@ -103,16 +104,11 @@ export function Contentsection() {
           ))}
         </motion.ul>
         
-        <motion.button
-          className="mt-4 px-4 py-2 bg-[#156FEE] text-white rounded-lg shadow-md hover:bg-blue-500 lg:text-[16px] sm:text-[14px] md:text-[14px]"
-          variants={buttonVariants}
-          whileHover="hover"
-          whileTap="tap"
-        >
-          <span className="text-white">📞 Request Call Back</span>
-        </motion.button>
+        
       </div>
-    </motion.div>
+      
+    </motion.div><br/>
+    
     </div>
   );
 }

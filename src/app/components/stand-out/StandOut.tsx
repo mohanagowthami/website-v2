@@ -1,12 +1,26 @@
+import { SectionWrapper } from "@/Common";
 import { Contentsection } from "./Content";
 import { Heading } from "./Header";
 import { Imagesection } from "./Image";
 
 export const StandOut = () => {
   return (
-    <div className="bg-[#f5faff] w-full px-6 py-6 md:px-12 md:py-12 lg:px-15 lg:py-14 xl:px-24 xl:py-27">
+   <SectionWrapper
+   
+   sectionTitleProps={{
+    title: "What Makes  ",
+    blueColorTitle: "HyperSonicc",
+    description: "A personalized learning experience that blends mentorship, flexibility, and job-ready skills.",
+    id: "section-id",
+    requestCBAlign: "left"
+   }}    
+  showRequestCallbackButton={true}
+  cs="bg-gray-100"
+   >
+      
+
       <Heading />
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 "id="why-us">
         <div>
           <Contentsection />
         </div>
@@ -15,6 +29,7 @@ export const StandOut = () => {
           <Imagesection />
         </div>
       </div>
-    </div>
+     
+    </SectionWrapper>
   );
 };

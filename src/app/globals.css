@@ -87,3 +87,17 @@ body {
   object-fit: cover;
 } */ 
 
+.custom-font-poppins
+{
+  font-family: "Poppins";
+}
+
+.custom-font-lato
+{
+  font-family: "Lato";
+}
+
+.custom-font-roboto
+{
+  font-family: "Roboto";
+}
