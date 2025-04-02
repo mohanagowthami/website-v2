@@ -15,6 +15,8 @@ export const AluminiComponent=()=>{
        requestCBAlign: "right"
     }}    
     showRequestCallbackButton={true}
+    
+    
 
     >
       <AlumniCard/>
