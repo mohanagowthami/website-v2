@@ -151,141 +151,200 @@
           ]
         },
      
-
-    
-        {
-          title: "Week 1: HTML5 & CSS3 Fundamentals",
-          days: [
-            "Day 1: Introduction to HTML5, Basic Tags ('<div>', '<p>', '<q>', '<img>')",
-            "Day 2: HTML5 Forms, Inputs, and Semantic Elements ('<header>', '<section>', '<footer>')",
-            "Day 3: Introduction to CSS3, Selectors, Colors, and Units ('px', 'rem')",
-            "Day 4: CSS3 Box Model (margin, padding, border), Flexbox Basics ('display: flex')",
-            "Day 5: Responsive Design with Media Queries, Basic Layout Techniques",
-            "Weekend Project: Build a simple personal profile page with a responsive layout using HTML5 and CSS3."
-          ]
-        },
-        {
-          title: "Week 2: Advanced CSS3 & Introduction to Tailwind CSS",
-          days: [
-            "Day 1: CSS Grid Layout, Creating Complex Layouts",
-            "Day 2: Animations and Transitions ('@keyframes', 'transition')",
-            "Day 3: Introduction to Tailwind CSS, Setting Up Tailwind in a Project",
-            "Day 4: Tailwind Utility Classes for Spacing, Colors, Flexbox, and Grid",
-            "Day 5: Building Responsive Layouts with Tailwind CSS (mobile-first approach)",
-            "Weekend Project: Rebuild the personal profile page from Week 1 using Tailwind CSS for styling."
-          ]
-        },
-        {
-          title: "Week 3: JavaScript Basics",
-          days: [
-            "Day 1: JavaScript Variables, Data Types, and Operators (`let`, `const`)",
-            "Day 2: Functions (declaration, arrow functions), Control Flow (`if`, `for`, `while`)",
-            "Day 3:  Arrays and Objects (methods like `map`, `filter`)",
-            "Day 4: DOM Manipulation (`document.querySelector`, `addEventListener`)",
-            "Day 5: JavaScript Events, Forms, and Validation",
-            "Weekend Project: Create an interactive form with validation and feedback messages using vanilla JavaScript."
-          ]
-        },
-        {
-          title: "Week 4: Intermediate JavaScript & Introduction to React",
-          days: [
-            "Day 1:  ES6+ Features (spread/rest operators, destructuring)",
-            "Day 2: `fetch` API, Promises, and `async/await` for HTTP requests",
-            "Day 3:  Setting up a React project using Create React App",
-            "Day 4: Understanding JSX and React Components (`function` components)",
-            "Day 5:  Managing state with `useState`, passing data with `props`",
-            "Weekend Project: Build a weather app using `fetch` API and React to display weather data based on user input."
-          ]
-        },
-        {
-          title: "Week 5: React Fundamentals & Tailwind CSS",
-          days: [
-            "Day 1:  React Component Lifecycle with `useEffect`",
-            "Day 2: Handling Events in React (`onClick`, `onChange`)",
-            "Day 3:  Forms in React and Controlled Components",
-            "Day 4:  Styling React Components with Tailwind CSS",
-            "Day 5: Reusable Components and File Structure in React",
-            "Weekend Project: Create a To-Do app using React and Tailwind CSS with features like adding, editing, and deleting tasks."
-          ]
-        },
-        {
-          title: "Week 6: Advanced React & Introduction to Redux Toolkit",
-          days: [
-            "Day 1:  React Hooks (`useRef`, `useContext`)",
-            "Day 2:  Introduction to Redux, Setting up Redux Toolkit (`configureStore`, `createSlice`)",
-            "Day 3:  Using `useSelector` and `useDispatch` to access and modify state",
-            "Day 4: Writing async actions with `createAsyncThunk`",
-            "Day 5: Combining Redux Toolkit with React components ",
-            "Weekend Project: Create a simple counter app with Redux Toolkit and Tailwind CSS for styling."
-          ]
-        },
-        {
-          title: "Week 7: Next.js Basics & Core Features",
-          days: [
-            "Day 1: What is Next.js? Setting up a Next.js project",
-            "Day 2:  Pages and File-Based Routing (`pages` directory)",
-            "Day 3:  Static Generation with `getStaticProps` and `getStaticPaths`",
-            "Day 4: Server-Side Rendering with `getServerSideProps`",
-            "Day 5: Client-Side Data Fetching with `useEffect` and Axios in Next.js ",
-            "Weekend Project:  Build a blog using Next.js, fetching data from an API, and using Tailwind CSS for styling."
-          ]
-        },
-        {
-          title: "Week 8: Advanced Next.js &amp; Redux Toolkit Integration ",
-          days: [
-            "Day 1:  API Routes in Next.js for creating backend endpoints",
-            "Day 2:  Customizing `_app.js` and `_document.js` for global styles",
-            "Day 3:  Dynamic Routing and Nested Routes in Next.js",
-            "Day 4:  Integrating Redux Toolkit in a Next.js project",
-            "Day 5:  Using `next/image` for optimized images",
-            "Weekend Project: Create a portfolio website with projects fetched from an API, using Next.js and Redux Toolkit."
-          ]
-        },
-        {
-          title: "Week 9: Full-Stack Development with Next.js ",
-          days: [
-            "Day 1:  Introduction to Databases (MongoDB or Firebase)",
-            "Day 2:  Connecting Next.js to a Database (CRUD operations)",
-            "Day 3:   Setting up user authentication with NextAuth.js",
-            "Day 4:  Managing Protected Routes in Next.js",
-            "Day 5:  Real-time Data Updates with Firebase or WebSockets",
-            "Weekend Project: Build a full-stack app with registration, login, and user-specific content."
-          ]
-        },
-        {
-          title: "Week 10: Advanced CSS3, Tailwind CSS, and Performance Optimization",
-          days: [
-            "Day 1:  Advanced Tailwind CSS (custom themes, extending configurations)",
-            "Day 2:  Animations and transitions using Tailwind CSS classes",
-            "Day 3:   Performance Optimization in React and Next.js (`React.memo`, `useMemo`)",
-            "Day 4:   Next.js Middleware for custom logic",
-            "Day 5:  Analyzing and Reducing Bundle Size in Next.js",
-            "Weekend Project: Optimize the blog project by adding Tailwind animations and improving performance."
-          ]
-        },
-        {
-          title: "Week 11: Deployment, CI/CD, and Best Practices",
-          days: [
-            "Day 1:  Deploying Next.js applications on Vercel",
-            "Day 2:  Setting up GitHub Actions for CI/CD pipelines",
-            "Day 3:  Version control best practices (branching, PRs)",
-            "Day 4:  Environment Variables and Configurations in Next.js ",
-            "Day 5:  SEO Best Practices with Next.js (`Head`, meta tags)",
-            "Weekend Project:  Deploy a full-stack project on Vercel with environment configurations."
-          ]
-        },
-        {
-          title: "Week 12: Capstone Project &amp; Final Review",
-          days: [
-            "Day 1-5: Capstone Project:",
-                       "-  Choose a project idea (e.g., social media app, e-commerce platform, real-time chat app).",
-                       "-Break down tasks, plan integrations, and set up a project plan." ,
-                       "- Implement and refine features with mentorship and guidance.",
-                       "Weekend Final Project: presentation, code review, and feedback session."
-          ]
-        },
+    {
+      title: "Week 1: Introduction to Backend Development",
+      days: [
+        "Day 1: Overview of Web Development: Understanding Frontend vs. Backend",
+        "Day 2: Role of the Backend in a Web Application: What happens behind the scenes",
+        "Day 3: Overview of Backend Languages: Python, Java, Go, Node.js",
+        "Day 4: Pros and Cons of Backend Languages: Choosing the right language for a project",
+        "Day 5: Setting Up Development Environment: Installing IDEs (VS Code, PyCharm, etc.)",
+        "Day 6: Introduction to Version Control: Git basics (init, clone, add, commit)",
+        "Day 7: Command Line Basics: Navigating the filesystem, creating folders, etc."
       ]
     },
+    {
+      title: "Week 2: Deeper into Backend Basics",
+      days: [
+        "Day 8: Understanding Repositories: Pushing, pulling, and branching in Git",
+        "Day 9: Collaborating with Git: Pull requests, merging, resolving conflicts",
+        "Day 10: Introduction to Python/Go/Node.js: Writing your first program",
+        "Day 11: Basic Syntax and Structure of Chosen Language",
+        "Day 12: Setting Up a Simple Server: Introduction to HTTP and web servers",
+        "Day 13: Building Your First API Endpoint: Returning JSON data",
+        "Day 14: Recap and Practice: Building simple scripts and APIs"
+      ]
+    },
+   
+    {
+      title: "Week 3: Programming Fundamentals",
+      days: [
+        "Day 15: Data Types and Variables: Understanding strings, numbers, booleans",
+        "Day 16: More Data Types: Lists/Arrays, Dictionaries/Objects",
+        "Day 17: Control Structures: Understanding conditionals (if-else)",
+        "Day 18: Loops: For and while loops, iteration over data structures",
+        "Day 19: Switch-Case (if supported): Writing more complex control flows",
+        "Day 20: Functions: Writing and using functions",
+        "Day 21: Recap and Practice: Coding challenges on control structures and functions",
+       
+      ]
+    },
+   
+    {
+      title: "Week 4: Advanced Programming Concepts",
+      days: [
+        "Day 22: Understanding Modules: Importing and using libraries",
+        "Day 23: Writing Your Own Modules: Structuring code for reusability",
+        "Day 24: Error Handling: Using try-catch or try-except",
+        "Day 25: Debugging Techniques: Using print statements, IDE debugger",
+        "Day 26: Advanced Functions: Lambda functions, closures",
+        "Day 27: Understanding Recursion and Iterative Solutions",
+        "Day 28: Recap and Practice: Coding challenges focusing on functions and error handling",
+        
+      ]
+    },
+    {
+      title: "Week 5: Introduction to Databases",
+      days: [
+        "Day 29: What are Databases? Overview of SQL vs. NoSQL",
+        "Day 30: Introduction to SQL: Basic queries (SELECT, INSERT, UPDATE, DELETE)",
+        "Day 31: Understanding Tables and Relationships: Primary keys, foreign keys",
+        "Day 32: SQL Practice: Complex queries with JOIN, GROUP BY",
+        "Day 33: Introduction to NoSQL: Understanding documents, collections",
+        "Day 34: MongoDB Basics: Inserting and querying data",
+        "Day 35: Recap and Practice: Building a simple database schema",
+      ]
+    },
+    {
+      title: "Week 6: ORMs and Database Integration",
+      days: [
+        "Day 36: Understanding ORMs: What and why",
+        "Day 37: Setting Up an ORM (e.g., SQLAlchemy, GORM, Sequelize)",
+        "Day 38: Working with ORMs: Creating models, saving data",
+        "Day 39: Querying with ORMs: Retrieving and updating data",
+        "Day 40: Relationships in ORMs: One-to-many, many-to-many",
+        "Day 41: Integrating Database with API: Building a simple API that interacts with a database",
+        "Day 42: Recap and Practice: Create a mini-project with database interactions",
+      ]
+    },
+    {
+      title: "Week 7: RESTful API Development",
+      days: [
+        "Day 43: What is REST? Principles and architecture",
+        "Day 44: Designing RESTful APIs: Resources, URLs, and methods",
+        "Day 45: Building a Basic API with Flask/Django/Express.js",
+        "Day 46: HTTP Methods Explained: GET, POST, PUT, DELETE",
+        "Day 47: Handling Request and Response: JSON formatting",
+        "Day 48: Testing APIs with Postman: Writing and automating tests",
+        "Day 49: Recap and Practice: Build an API with at least three endpoints",
+      ]
+    },
+    {
+      title: "Week 8: Advanced API Concepts",
+      days: [
+        "Day 50: Handling Query Parameters and Headers in APIs",
+        "Day 51: Understanding RESTful Status Codes: 200, 404, 500, etc",
+        "Day 52: Error Handling in APIs: Returning proper status codes",
+        "Day 53: CORS and API Security Basics",
+        "Day 54: API Documentation with Swagger or OpenAPI",
+        "Day 55: API Versioning and Best Practices",
+        "Day 56: Recap and Practice: Document your API and add error handling",
+      
+      ]
+    },
+    {
+      title: "Week 9: Authentication and Authorization",
+      days: [
+        "Day 57: Understanding Authentication vs. Authorization",
+        "Day 58: Introduction to JWT: Why and how it works",
+        "Day 59: Implementing JWT Authentication in Your API",
+        "Day 60: OAuth Basics: What it is and how it works",
+        "Day 61: Using OAuth with Google/Facebook in your API",
+        "Day 62: Introduction to Role-Based Access Control",
+        "Day 63: Recap and Practice: Implement authentication in your API",
+       
+      ]
+    },
+    {
+      title: "Week 10: Security in Backend",
+      days: [
+        "Day 64: Securing API Endpoints: Best practices",
+        "Day 65: Hashing Passwords: Using bcrypt",
+        "Day 66: Implementing Sessions and Cookies",
+        "Day 67: Protecting against common vulnerabilities: XSS, CSRF",
+        "Day 68: Understanding HTTPS and SSL",
+        "Day 69: Testing Security with Postman",
+        "Day 70: Recap and Practice: Secure an existing API",
+      
+      ]
+    },
+    {
+      title: "Week 11: Middleware and Error Handling",
+      days: [
+        "Day 71: What is Middleware? Concepts and use cases",
+        "Day 72: Writing Custom Middleware: Logging requests",
+        "Day 73: Using Middleware for Authentication",
+        "Day 74: Advanced Error Handling Techniques",
+        "Day 75: Implementing Logging in APIs: Using libraries",
+        "Day 76: Handling Async Operations: Promises and async/await",
+        "Day 77: Recap and Practice: Build custom middleware and add logging",
+       
+      ]
+    },
+    {
+      title: "Week 12: Caching and File Handling",
+      days: [
+        "Day 78: Introduction to Caching: Why and how",
+        "Day 79: Using Redis for Caching API Responses",
+        "Day 80: Implementing Caching in API",
+        "Day 81: Introduction to File Uploads in APIs",
+        "Day 82: Handling File Uploads with Express/Django",
+        "Day 83: Processing Uploaded Files: Image resizing, CSV parsing",
+        "Day 84: Recap and Practice: Add caching and file handling to your API",
+        
+      ]
+    },
+    {
+      title: "Week 13: Deployment and Scalability",
+      days: [
+        "Day 85: Overview of Deployment: Cloud vs. Self-hosting",
+        "Day 86: Introduction to Docker: Why and how",
+        "Day 87: Creating a Dockerfile for Your Application",
+        "Day 88: Deploying with Docker Compose",
+        "Day 89: Introduction to CI/CD Pipelines",
+        "Day 90: Setting up a CI/CD Pipeline using GitHub Actions",
+        "Day 91: Deploying on AWS/Heroku",
+        
+      ]
+    },
+    {
+      title: "Capstone Project",
+      days: [
+        "Day 92: Understanding Load Balancers and Auto-scaling",
+        "Day 93: Dockerize and deploy a simple API",
+        "Day 94: Project Planning: Define scope and features",
+        "Day 95: Setting Up the Repository and Initial Setup",
+        "Day 96-98: Building APIs: Focus on CRUD functionality",
+        "Day 99-101: Integrate Authentication and Caching",
+        "Day 102-103: Test, Debug, and Prepare Documentation",
+        "Day 104: Code Review and Feedback",
+        "Day 105: Final Presentation Preparation",
+      ]
+    },
+    {
+      title: " Supplementary Topics",
+      days: [
+        "Day 106-110: Deep Dive into Supplimentary topics (GraphQL,Websockets, etc.)",
+        "Day 111-115: Continue Capstone Project Development and Implement Optional Topics",
+        " Day 116-118: Finalize Capstone Project, Polish Codebase.",
+        "Day 119: Dry Run of the Final Presentation",
+        "Day 120: Finalize Capstone Project, Polish Codebase.",
+      ]
+    },
+  ]
+},
+
+    
     "Cybersecurity": {
       title: "Cybersecurity",
       weeks: [
