@@ -1,5 +1,5 @@
 "use client"
-import { SectionWrapper } from "@/Common";
+import { SectionTitle , SectionWrapper } from "@/Common";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 const programs = [
   {
     title: "Full Stack Development",
-    id:"full-stack",
+    id:"Full-Stack",
     icon: "/fullstackdevelopment.svg",
     duration: "5 Months",
     mode: "Online, Offline",
@@ -21,7 +21,7 @@ const programs = [
   },
   {
     title: "Cybersecurity",
-    id:"cybersecurity",
+    id:"Cybersecurity",
     icon: "/cyber.svg",
     duration: "4 Months",
     mode: "Online, Offline",
@@ -34,7 +34,7 @@ const programs = [
   },
   {
     title: "Soft Skills Development",
-    id:"soft-skills",
+    id:"Soft-Skills",
     icon: "/softskill.svg",
     duration: "2 Months",
     mode: "Online, Offline",
@@ -70,7 +70,7 @@ const Programs: React.FC = () => {
                              >
 
       {/* Programs Grid */}
-      <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5">
+      <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5 " id="programs">
         {programs.map((program, index) => {
           // Different animations for each card
           let animationClass = "";
@@ -126,16 +126,11 @@ const Programs: React.FC = () => {
                 Curriculum
               </button>
 
-              {/* <Link href={`/${program.id}/curriculum`}>
-              <button className="w-full py-[10px] px-4 shadow-sm text-[#175cd3] bg-[#eff8ff] rounded-lg hover:bg-blue-600 hover:text-white transition-colors mt-2.5" >
-                Curriculum
-              </button>
-              </Link> */}
             </div>
           );
         })}
       </div>
-    </SectionWrapper>
+      </SectionWrapper>
   );
 };
 
@@ -143,3 +138,8 @@ export default Programs;
 
 
 
+ {/* <Link href={`/${program.id}/curriculum`}>
+              <button className="w-full py-[10px] px-4 shadow-sm text-[#175cd3] bg-[#eff8ff] rounded-lg hover:bg-blue-600 hover:text-white transition-colors mt-2.5" >
+                Curriculum
+              </button>
+              </Link> */}

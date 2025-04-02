@@ -5,23 +5,28 @@
 "use client";
 import { SectionWrapper } from "@/Common/SectionWrapper";
 import { ContactForm } from "./index";
+import { SectionTitle } from "@/Common/SectionTitle";
 
 export const LeftRightSection = () => {
   return (
+    <section id="contact-us">
     <SectionWrapper
-      cs="bg-color-red"
-      sectionTitleProps={{
-        title: "Level Up Your Skills and",
-        blueColorTitle: "Land Your Dream Job",
-        description:"Master industry-standard skills through expert-led teaching, hands-on training, real-world projects, and personalized mentorship.",
-        mainTitle: false,
-        id: "left-right-section",
-      }}
       showRequestCallbackButton={false}
+      cs=" md:pt-18 lg:pt-32"
     >
       <div className="max-w-[90%] sm:max-w-[83%] md:max-w-[75%] lg:max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[15%]">
         {/* Left Section */}
-        <div className="space-y-6">
+        <div className="flex flex-col gap-6 max-w-xl pt-8">
+          <SectionTitle
+            title="Level Up Your Skills and"
+            blueColorTitle="Land Your Dream Job"
+            description="Master industry-standard skills through expert-led teaching, hands-on training, real-world projects, and personalized mentorship."
+            mainTitle={false}
+            titleAlign="left"
+            className="!items-start !text-left"
+            // titleSize="large"
+            // largeTitle={true} // This enables the extra large size
+          />
           {/* Statistics Box */}
           <div className="bg-white p-[28px] rounded-[20px] border border-[#e4e7ec] xl:max-w-[85%] 2xl:max-w-[78%]">
             <div className="flex content-center items-center w-full gap-4">
@@ -68,17 +73,14 @@ export const LeftRightSection = () => {
         </div>
 
         {/* Right Section */}
-        <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 lg:max-w-[95%] xl:max-w-[95%]" 
-        
-        
-        >
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900" >
+        <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 lg:max-w-[95%] xl:max-w-[95%]">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
             Let's get in touch
           </h2>
           <ContactForm />
         </div>
       </div>
     </SectionWrapper>
+    </section>
   );
 };
-
