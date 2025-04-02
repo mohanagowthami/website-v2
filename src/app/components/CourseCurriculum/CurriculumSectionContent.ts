@@ -149,8 +149,201 @@
                        "Weekend Final Project: presentation, code review, and feedback session."
           ]
         },
+     
+    {
+      title: "Week 1: Introduction to Backend Development",
+      days: [
+        "Day 1: Overview of Web Development: Understanding Frontend vs. Backend",
+        "Day 2: Role of the Backend in a Web Application: What happens behind the scenes",
+        "Day 3: Overview of Backend Languages: Python, Java, Go, Node.js",
+        "Day 4: Pros and Cons of Backend Languages: Choosing the right language for a project",
+        "Day 5: Setting Up Development Environment: Installing IDEs (VS Code, PyCharm, etc.)",
+        "Day 6: Introduction to Version Control: Git basics (init, clone, add, commit)",
+        "Day 7: Command Line Basics: Navigating the filesystem, creating folders, etc."
       ]
     },
+    {
+      title: "Week 2: Deeper into Backend Basics",
+      days: [
+        "Day 8: Understanding Repositories: Pushing, pulling, and branching in Git",
+        "Day 9: Collaborating with Git: Pull requests, merging, resolving conflicts",
+        "Day 10: Introduction to Python/Go/Node.js: Writing your first program",
+        "Day 11: Basic Syntax and Structure of Chosen Language",
+        "Day 12: Setting Up a Simple Server: Introduction to HTTP and web servers",
+        "Day 13: Building Your First API Endpoint: Returning JSON data",
+        "Day 14: Recap and Practice: Building simple scripts and APIs"
+      ]
+    },
+   
+    {
+      title: "Week 3: Programming Fundamentals",
+      days: [
+        "Day 15: Data Types and Variables: Understanding strings, numbers, booleans",
+        "Day 16: More Data Types: Lists/Arrays, Dictionaries/Objects",
+        "Day 17: Control Structures: Understanding conditionals (if-else)",
+        "Day 18: Loops: For and while loops, iteration over data structures",
+        "Day 19: Switch-Case (if supported): Writing more complex control flows",
+        "Day 20: Functions: Writing and using functions",
+        "Day 21: Recap and Practice: Coding challenges on control structures and functions",
+       
+      ]
+    },
+   
+    {
+      title: "Week 4: Advanced Programming Concepts",
+      days: [
+        "Day 22: Understanding Modules: Importing and using libraries",
+        "Day 23: Writing Your Own Modules: Structuring code for reusability",
+        "Day 24: Error Handling: Using try-catch or try-except",
+        "Day 25: Debugging Techniques: Using print statements, IDE debugger",
+        "Day 26: Advanced Functions: Lambda functions, closures",
+        "Day 27: Understanding Recursion and Iterative Solutions",
+        "Day 28: Recap and Practice: Coding challenges focusing on functions and error handling",
+        
+      ]
+    },
+    {
+      title: "Week 5: Introduction to Databases",
+      days: [
+        "Day 29: What are Databases? Overview of SQL vs. NoSQL",
+        "Day 30: Introduction to SQL: Basic queries (SELECT, INSERT, UPDATE, DELETE)",
+        "Day 31: Understanding Tables and Relationships: Primary keys, foreign keys",
+        "Day 32: SQL Practice: Complex queries with JOIN, GROUP BY",
+        "Day 33: Introduction to NoSQL: Understanding documents, collections",
+        "Day 34: MongoDB Basics: Inserting and querying data",
+        "Day 35: Recap and Practice: Building a simple database schema",
+      ]
+    },
+    {
+      title: "Week 6: ORMs and Database Integration",
+      days: [
+        "Day 36: Understanding ORMs: What and why",
+        "Day 37: Setting Up an ORM (e.g., SQLAlchemy, GORM, Sequelize)",
+        "Day 38: Working with ORMs: Creating models, saving data",
+        "Day 39: Querying with ORMs: Retrieving and updating data",
+        "Day 40: Relationships in ORMs: One-to-many, many-to-many",
+        "Day 41: Integrating Database with API: Building a simple API that interacts with a database",
+        "Day 42: Recap and Practice: Create a mini-project with database interactions",
+      ]
+    },
+    {
+      title: "Week 7: RESTful API Development",
+      days: [
+        "Day 43: What is REST? Principles and architecture",
+        "Day 44: Designing RESTful APIs: Resources, URLs, and methods",
+        "Day 45: Building a Basic API with Flask/Django/Express.js",
+        "Day 46: HTTP Methods Explained: GET, POST, PUT, DELETE",
+        "Day 47: Handling Request and Response: JSON formatting",
+        "Day 48: Testing APIs with Postman: Writing and automating tests",
+        "Day 49: Recap and Practice: Build an API with at least three endpoints",
+      ]
+    },
+    {
+      title: "Week 8: Advanced API Concepts",
+      days: [
+        "Day 50: Handling Query Parameters and Headers in APIs",
+        "Day 51: Understanding RESTful Status Codes: 200, 404, 500, etc",
+        "Day 52: Error Handling in APIs: Returning proper status codes",
+        "Day 53: CORS and API Security Basics",
+        "Day 54: API Documentation with Swagger or OpenAPI",
+        "Day 55: API Versioning and Best Practices",
+        "Day 56: Recap and Practice: Document your API and add error handling",
+      
+      ]
+    },
+    {
+      title: "Week 9: Authentication and Authorization",
+      days: [
+        "Day 57: Understanding Authentication vs. Authorization",
+        "Day 58: Introduction to JWT: Why and how it works",
+        "Day 59: Implementing JWT Authentication in Your API",
+        "Day 60: OAuth Basics: What it is and how it works",
+        "Day 61: Using OAuth with Google/Facebook in your API",
+        "Day 62: Introduction to Role-Based Access Control",
+        "Day 63: Recap and Practice: Implement authentication in your API",
+       
+      ]
+    },
+    {
+      title: "Week 10: Security in Backend",
+      days: [
+        "Day 64: Securing API Endpoints: Best practices",
+        "Day 65: Hashing Passwords: Using bcrypt",
+        "Day 66: Implementing Sessions and Cookies",
+        "Day 67: Protecting against common vulnerabilities: XSS, CSRF",
+        "Day 68: Understanding HTTPS and SSL",
+        "Day 69: Testing Security with Postman",
+        "Day 70: Recap and Practice: Secure an existing API",
+      
+      ]
+    },
+    {
+      title: "Week 11: Middleware and Error Handling",
+      days: [
+        "Day 71: What is Middleware? Concepts and use cases",
+        "Day 72: Writing Custom Middleware: Logging requests",
+        "Day 73: Using Middleware for Authentication",
+        "Day 74: Advanced Error Handling Techniques",
+        "Day 75: Implementing Logging in APIs: Using libraries",
+        "Day 76: Handling Async Operations: Promises and async/await",
+        "Day 77: Recap and Practice: Build custom middleware and add logging",
+       
+      ]
+    },
+    {
+      title: "Week 12: Caching and File Handling",
+      days: [
+        "Day 78: Introduction to Caching: Why and how",
+        "Day 79: Using Redis for Caching API Responses",
+        "Day 80: Implementing Caching in API",
+        "Day 81: Introduction to File Uploads in APIs",
+        "Day 82: Handling File Uploads with Express/Django",
+        "Day 83: Processing Uploaded Files: Image resizing, CSV parsing",
+        "Day 84: Recap and Practice: Add caching and file handling to your API",
+        
+      ]
+    },
+    {
+      title: "Week 13: Deployment and Scalability",
+      days: [
+        "Day 85: Overview of Deployment: Cloud vs. Self-hosting",
+        "Day 86: Introduction to Docker: Why and how",
+        "Day 87: Creating a Dockerfile for Your Application",
+        "Day 88: Deploying with Docker Compose",
+        "Day 89: Introduction to CI/CD Pipelines",
+        "Day 90: Setting up a CI/CD Pipeline using GitHub Actions",
+        "Day 91: Deploying on AWS/Heroku",
+        
+      ]
+    },
+    {
+      title: "Capstone Project",
+      days: [
+        "Day 92: Understanding Load Balancers and Auto-scaling",
+        "Day 93: Dockerize and deploy a simple API",
+        "Day 94: Project Planning: Define scope and features",
+        "Day 95: Setting Up the Repository and Initial Setup",
+        "Day 96-98: Building APIs: Focus on CRUD functionality",
+        "Day 99-101: Integrate Authentication and Caching",
+        "Day 102-103: Test, Debug, and Prepare Documentation",
+        "Day 104: Code Review and Feedback",
+        "Day 105: Final Presentation Preparation",
+      ]
+    },
+    {
+      title: " Supplementary Topics",
+      days: [
+        "Day 106-110: Deep Dive into Supplimentary topics (GraphQL,Websockets, etc.)",
+        "Day 111-115: Continue Capstone Project Development and Implement Optional Topics",
+        " Day 116-118: Finalize Capstone Project, Polish Codebase.",
+        "Day 119: Dry Run of the Final Presentation",
+        "Day 120: Finalize Capstone Project, Polish Codebase.",
+      ]
+    },
+  ]
+},
+
+    
     "Cybersecurity": {
       title: "Cybersecurity",
       weeks: [
