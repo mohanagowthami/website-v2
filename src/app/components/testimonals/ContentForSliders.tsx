@@ -10,7 +10,7 @@ interface SlideProps {
 export const ContentForSliders: React.FC<SlideProps> = ({ text, name, logo }) => {
     return (
         <>
-            <div className="flex flex-col items-center justify-center w-full p-10"id="Testimonials">
+            <div className="flex flex-col items-center justify-center w-full p-10"id="testimonials">
                 <p className="text-gray-700 text-center lg:text-[26px] max-w-6xl mb-6
               md:text-[22px] sm:text-[18px]">
                     {text}
