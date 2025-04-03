@@ -69,7 +69,7 @@ const faqs = [
            
                  >
 
-    <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 py-8 "id="faq's">
+    <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 py-8 "id="faqs">
      
 
       {/* FAQ Container */}

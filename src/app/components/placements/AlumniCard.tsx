@@ -2,7 +2,6 @@
 import { SectionTitle } from "@/Common";
 import Image from "next/image";
 
-
 const people = [
   {
     name: "Kishore Gundra",
@@ -36,7 +35,8 @@ export const AlumniCard = () => {
           {people.concat(people).map((person, index) => (
             <div
               key={index}
-              className="bg-[#FBFCFC] p-6 rounded-3xl border border-gray-300 text-left min-w-[300px] sm:min-w-[350px] md:min-w-[380px]"
+              className="p-6 rounded-3xl border border-gray-300 text-left min-w-[300px] sm:min-w-[350px] md:min-w-[380px] shadow-lg"
+              style={{ backgroundColor: "transparent" }} // Fixes background issue
             >
               <div className="flex items-center gap-4">
                 <Image
@@ -44,20 +44,20 @@ export const AlumniCard = () => {
                   alt={person.name}
                   width={80}
                   height={80}
-                  className="rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] mb-25"
+                  className="rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px] mb-2"
                 />
                 <div>
                   <h3 className="text-[18px] font-semibold">{person.name}</h3>
                   <p className="text-gray-500 text-[14px]">{person.course}</p>
                   <p className="text-gray-500 text-[14px]">{person.college}</p>
                   <div className="mt-2">
-                    <img src="down-arrow.svg" alt="arrow" className="w-9 h-10 ml-[30%]" />
+                    <img src="down-arrow.svg" alt="arrow" className="w-9 h-10 mx-auto" />
                     <Image
                       src={person.company}
                       alt="Company"
                       width={90}
                       height={30}
-                      className="mt-2 ml-[20%]"
+                      className="mt-2 mx-auto"
                     />
                   </div>
                 </div>
@@ -67,7 +67,6 @@ export const AlumniCard = () => {
         </div>
       </div>
 
-     
       {/* Keyframes for Smooth Infinite Scroll */}
       <style jsx>{`
         @keyframes scroll {
@@ -79,14 +78,10 @@ export const AlumniCard = () => {
           }
         }
         .animate-scroll {
+          display: flex;
           animation: scroll 16s linear infinite;
         }
       `}</style>
-      
     </div>
   );
 };
-
-
-
-
