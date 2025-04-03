@@ -52,10 +52,11 @@ const CurriculumListing: React.FC = () => {
   return (
     <div className="w-full">
       <CurriculumHeader />
+      <h1 className=" text-[33px] font-semibold flex justify-center text-gray-800 mb-10"> Full-Stack</h1>
 
       <div className="max-w-full font-semibold mx-auto ml-15 mr-15 mb-42">
         <h1 className="text-[33px] flex justify-center text-gray-800 mb-10">{course.title}</h1>
-        <div className="space-y-4">
+        <div className="space-y-4">``
           {course.weeks.map((week, weekIndex) => (
             <React.Fragment key={weekIndex}>
               {/* Add Backend heading after Week 12 */}

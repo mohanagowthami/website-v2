@@ -16,7 +16,7 @@ export const LeftRightSection = () => {
     >
       <div className="max-w-[90%] sm:max-w-[83%] md:max-w-[75%] lg:max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[15%]">
         {/* Left Section */}
-        <div className="flex flex-col gap-6 max-w-xl pt-8">
+        <div className="flex flex-col gap-6 max-w-xl ">
           <SectionTitle
             title="Level Up Your Skills and"
             blueColorTitle="Land Your Dream Job"
