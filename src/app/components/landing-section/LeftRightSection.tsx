@@ -12,7 +12,7 @@ export const LeftRightSection = () => {
     <section id="contact-us">
     <SectionWrapper
       showRequestCallbackButton={false}
-      cs="pt-24 md:pt-28 lg:pt-32"
+      cs=" md:pt-18 lg:pt-32"
     >
       <div className="max-w-[90%] sm:max-w-[83%] md:max-w-[75%] lg:max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[15%]">
         {/* Left Section */}

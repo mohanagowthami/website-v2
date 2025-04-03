@@ -22,6 +22,7 @@ export default function Home() {
       <LandingSection/>
       <AluminiComponent/>
       <Programs/>
+      
       <StandOut/>
       <ExpertTutors/>
       <TestimonalsSwiper/>    
