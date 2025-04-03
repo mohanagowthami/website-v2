@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { coursesData } from './CurriculumSectionContent';
 import { CurriculumHeader } from './CurriculumHeader';
+import Image from "next/image";
 
 interface Week {
   title: string;
@@ -55,13 +56,25 @@ const CurriculumListing: React.FC = () => {
       <h1 className=" text-[33px] font-semibold flex justify-center text-gray-800 mb-10"> Full-Stack</h1>
 
       <div className="max-w-full font-semibold mx-auto ml-15 mr-15 mb-42">
-        <h1 className="text-[33px] flex justify-center text-gray-800 mb-10">{course.title}</h1>
-        <div className="space-y-4">``
+        <h1 className="text-[35px] font-normal flex justify-center text-black mt-20 mb-10">{course.title}</h1>
+        
+
+{/* Add the images here */}
+<div className="flex justify-center gap-6">
+<Image src="/react-svgrepo-com.svg" alt="react icon" width={48} height={48} />
+<Image src="/coding.png" alt="coding icon" width={48} height={48} />
+<Image src="/node-svgrepo-com.svg" alt="javascript icon" width={48} height={48} />
+<Image src="/nextjs-svgrepo-com.svg" alt="nextjs icon" width={48} height={48} />
+
+</div>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-8 mb-4">Frontend -</h2>
+        <div className="space-y-4">
           {course.weeks.map((week, weekIndex) => (
             <React.Fragment key={weekIndex}>
               {/* Add Backend heading after Week 12 */}
               {weekIndex === week12Index + 1 && (
-                <h2 className="text-xl font-bold text-gray-800 mt-8 mb-4">Backend Development</h2>
+                <h2 className="text-xl font-bold text-gray-800 mt-8 mb-4">Backend -</h2>
               )}
               
               <div className="border border-gray-200 rounded-lg overflow-hidden">
