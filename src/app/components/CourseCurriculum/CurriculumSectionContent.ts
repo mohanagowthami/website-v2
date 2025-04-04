@@ -149,11 +149,7 @@
                        "Weekend Final Project: presentation, code review, and feedback session."
           ]
         },
-      // ]
-    
-        
-      // title: "Backend",
-      // weeks: [
+      
      
     {
       title: "Week 1: Introduction to Backend Development",
