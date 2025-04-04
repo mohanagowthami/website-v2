@@ -74,7 +74,7 @@ export const LeftRightSection = () => {
 
         {/* Right Section */}
         <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-8 lg:max-w-[95%] xl:max-w-[95%]">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 " id="contact-us">
             Let's get in touch
           </h2>
           <ContactForm />

@@ -37,7 +37,7 @@ export const Header = () => {
         {/* Large Desktop (lg and up) - Full navigation */}
         <div className="hidden lg:flex justify-between items-center py-2">
           <HeaderSection />
-          <nav className="relative flex text-blue-950 p-3 rounded-lg">
+          <nav className="relative flex text-blue-800 p-3 rounded-lg">
             <div className="flex space-x-4">
               {tabs.map((tab) => (
                 <button
@@ -48,7 +48,7 @@ export const Header = () => {
                   {selectedTab === tab.id && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-blue-500 rounded-md"
+                      className="absolute inset-0 bg-blue-400 rounded-md"
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     />
                   )}
