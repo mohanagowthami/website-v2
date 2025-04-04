@@ -6,3 +6,5 @@ const CurriculumListingPage=()=>{
 
 
 export default CurriculumListingPage
+
+

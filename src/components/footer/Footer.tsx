@@ -13,7 +13,7 @@ export function Footer() {
   };
 
   return (
-    <SectionWrapper 
+    <SectionWrapper
       showRequestCallbackButton={false}
       cs="!px-0 !md:px-0 !p-0 !overflow-hidden !max-h-none " // Remove padding and ensure full width
     >
@@ -47,18 +47,18 @@ export function Footer() {
             {/* Get Help */}
             <div className="space-y-3  mt-6">
               <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6]">Get Help</h4>
-              <motion.p 
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }} 
-                className="text-[#2E90FA] font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]" 
+              <motion.p
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-[#2E90FA] font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
                 onClick={() => scrollToSection("faqs")}
               >
                 FAQ's
               </motion.p>
-              <motion.p 
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }} 
-                className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]" 
+              <motion.p
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
                 onClick={() => scrollToSection("contact-us")}
               >
                 Contact Us
@@ -68,29 +68,30 @@ export function Footer() {
             {/* Programs */}
             <div className="space-y-3 mt-6">
               <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6]">Programs</h4>
-              <motion.p 
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }} 
-                className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]" 
-                onClick={() => scrollToSection("backend-development")}
+
+              <motion.p
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+                onClick={() => scrollToSection("full-stack")}
+              >
+                Full-Stack Development
+              </motion.p>
+              <motion.p
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
+                onClick={() => scrollToSection("cybersecurity")}
               >
                 Cyber Security
               </motion.p>
-              <motion.p 
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }} 
-                className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]" 
+              <motion.p
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
                 onClick={() => scrollToSection("soft-skills")}
               >
                 Soft Skills
-              </motion.p>
-              <motion.p 
-                whileHover={{ scale: 1.05 }} 
-                whileTap={{ scale: 0.95 }} 
-                className="text-blue-500 font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]" 
-                onClick={() => scrollToSection("full-stack-development")}
-              >
-                Full-Stack Development
               </motion.p>
             </div>
 
@@ -118,3 +119,7 @@ export function Footer() {
     </SectionWrapper>
   );
 }
+
+
+
+
