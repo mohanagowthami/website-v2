@@ -16,8 +16,12 @@
   
    export const coursesData: CoursesData = {
     "Full-Stack": {
+<<<<<<< HEAD
       
       title: "Frontend Development",
+=======
+      title: "Full Stack",
+>>>>>>> 4b483177a15e397618441af6f27019fb63e9307b
       weeks: [
         {
           title: "Week 1: HTML5 & CSS3 Fundamentals",
@@ -150,6 +154,11 @@
                        "Weekend Final Project: presentation, code review, and feedback session."
           ]
         },
+      // ]
+    
+        
+      // title: "Backend",
+      // weeks: [
      
     {
       title: "Week 1: Introduction to Backend Development",
@@ -515,7 +524,7 @@
       ]
     },
     "Soft-Skills": {
-      title: "Soft Skills Development",
+      title: "Soft Skills",
       weeks: [
         {
           title: "Week 1: Introduction to Soft Skills",

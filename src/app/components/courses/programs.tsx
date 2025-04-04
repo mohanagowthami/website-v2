@@ -32,8 +32,8 @@ const programs = [
     ],
   },
   {
-    title: "Soft Skills Development",
-    id: "Soft-Skills",
+    title: "Soft Skills",
+    id:"Soft-Skills",
     icon: "/softskill.svg",
     duration: "2 Months",
     mode: "Online, Offline",
