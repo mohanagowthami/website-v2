@@ -16,12 +16,7 @@
   
    export const coursesData: CoursesData = {
     "Full-Stack": {
-<<<<<<< HEAD
-      
-      title: "Frontend Development",
-=======
       title: "Full Stack",
->>>>>>> 4b483177a15e397618441af6f27019fb63e9307b
       weeks: [
         {
           title: "Week 1: HTML5 & CSS3 Fundamentals",
