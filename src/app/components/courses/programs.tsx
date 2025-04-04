@@ -33,7 +33,7 @@ const programs = [
     ],
   },
   {
-    title: "Soft Skills Development",
+    title: "Soft Skills",
     id:"Soft-Skills",
     icon: "/softskill.svg",
     duration: "2 Months",
