@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { SectionTitle, SectionWrapper } from "@/Common";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -33,7 +33,7 @@ const programs = [
   },
   {
     title: "Soft Skills",
-    id:"Soft-Skills",
+    id: "Soft-Skills",
     icon: "/softskill.svg",
     duration: "2 Months",
     mode: "Online, Offline",
@@ -50,16 +50,36 @@ const Programs: React.FC = () => {
   const router = useRouter();
   const [loadingId, setLoadingId] = useState<string | null>(null);
 
-  // Prefetch all curriculum pages when component mounts
+  // Enhanced prefetching with error handling
   useEffect(() => {
-    programs.forEach(program => {
-      router.prefetch(`/${program.id}/curriculum`);
-    });
+    const prefetchAll = async () => {
+      try {
+        await Promise.all(
+          programs.map((program) =>
+            router.prefetch(`/${program.id}/curriculum`)
+          )
+        );
+      } catch (error) {
+        console.error("Prefetching failed:", error);
+      }
+    };
+
+    prefetchAll();
   }, [router]);
 
-  const handleClick = (id: string) => {
+  const handleClick = async (id: string) => {
     setLoadingId(id);
-    router.push(`/${id}/curriculum`);
+    try {
+      // Add a small delay to ensure loading state is visible
+      await Promise.all([
+        new Promise((resolve) => setTimeout(resolve, 150)), // Minimum loading time
+        router.push(`/${id}/curriculum`, { scroll: false }),
+      ]);
+    } catch (error) {
+      console.error("Navigation failed:", error);
+    } finally {
+      setLoadingId(null);
+    }
   };
 
   return (
@@ -67,93 +87,105 @@ const Programs: React.FC = () => {
       cs=""
       sectionTitleProps={{
         title: "Choose Your Path to ",
-        blueColorTitle: "Sucess",
+        blueColorTitle: "Success",
         description: "Explore programs built to transform your skills into career opportunities.",
         id: "section-id",
       }}
       showRequestCallbackButton={false}
     >
-      {/* Programs Grid */}
       <div className="grid grid-cols-1 mt-6 md:grid-cols-2 md:mt-12 lg:grid-cols-3 lg:mt-16 gap-5" id="programs">
         {programs.map((program, index) => {
-          // Different animations for each card
-          let animationClass = "";
-          if (index === 0) {
-            animationClass = "animate-slide-in-left";
-          } else if (index === 1) {
-            animationClass = "animate-slide-in-top";
-          } else {
-            animationClass = "animate-slide-in-right";
-          }
+          // Animation classes for entrance effects
+          const animationClass = 
+            index === 0 ? "animate-slide-in-left" :
+            index === 1 ? "animate-slide-in-top" :
+            "animate-slide-in-right";
 
           return (
             <div
-              key={index}
+              key={program.id}
               className={`p-5 rounded-[20px] border border-[#e4e7ec] bg-white flex flex-col ${animationClass}`}
             >
-              <div className="flex justify-center">
+              {/* Optimized Image */}
+              <div className="flex justify-center h-40">
                 <Image
                   src={program.icon}
                   alt={program.title}
-                  width={500}
-                  height={500}
-                  className="object-cover w-full"
-                  priority={index < 3} // Prioritize first 3 images
+                  width={120}
+                  height={120}
+                  className="object-contain w-auto h-full"
+                  priority={index < 2}
+                  loading={index > 1 ? "lazy" : "eager"}
                 />
               </div>
+
               <h3 className="mt-5 text-base lg:text-lg xl:text-2xl font-semibold text-[#0F1728]">
                 {program.title}
               </h3>
+
               <div className="mt-2 flex items-center gap-2">
                 <Image 
                   src="/clock.svg" 
-                  alt="Clock" 
+                  alt="Duration" 
                   width={14} 
                   height={14} 
                   className="w-3.5 h-3.5"
+                  priority
                 />
                 <span className="text-xs xl:text-sm text-[#98A1B2]">Duration:</span>
                 <span className="text-sm xl:text-base text-[#475466] font-semibold">
                   {program.duration}
                 </span>
               </div>
-              <div className="flex items-center gap-2">
+
+              <div className="flex items-center gap-2 mt-1">
                 <Image 
                   src="/computer.svg" 
-                  alt="Computer" 
+                  alt="Mode" 
                   width={14} 
                   height={14} 
                   className="w-3.5 h-3.5"
+                  priority
                 />
                 <span className="text-xs xl:text-sm text-[#98A1B2]">Mode:</span>
                 <span className="text-sm xl:text-base text-[#475466] font-semibold">
                   {program.mode}
                 </span>
               </div>
+
               <div className="mt-4 text-[#667084] space-y-2 flex-grow">
                 {program.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-2">
                     <Image 
                       src="/star.svg" 
-                      alt="Star" 
+                      alt="Feature" 
                       width={14} 
                       height={14} 
                       className="w-3.5 h-3.5 mt-0.5 flex-shrink-0"
+                      priority
                     />
                     <span className="text-xs md:text-xs lg:text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
+
+              {/* Optimized Button with Loading State */}
               <button
-                className={`w-full py-[10px] px-4 shadow-sm text-[#175cd3] bg-[#eff8ff] rounded-lg hover:bg-blue-600 hover:text-white transition-colors mt-2.5 flex items-center justify-center ${
-                  loadingId === program.id ? "opacity-75" : ""
+                className={`w-full py-[10px] px-4 shadow-sm text-[#175cd3] bg-[#eff8ff] rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-200 mt-2.5 flex items-center justify-center ${
+                  loadingId === program.id ? "opacity-80 cursor-not-allowed" : ""
                 }`}
                 onClick={() => handleClick(program.id)}
                 disabled={loadingId === program.id}
+                aria-label={`View ${program.title} curriculum`}
               >
                 {loadingId === program.id ? (
                   <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg 
+                      className="animate-spin -ml-1 mr-2 h-4 w-4 text-blue-500" 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      fill="none" 
+                      viewBox="0 0 24 24"
+                    >
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
