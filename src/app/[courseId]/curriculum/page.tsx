@@ -1,4 +1,4 @@
-import { CurriculumListing } from "@/app/components/CourseCurriculum"
+import { CurriculumListing } from "@/components/CourseCurriculum"
 
 const CurriculumListingPage=()=>{
     return <CurriculumListing/>
