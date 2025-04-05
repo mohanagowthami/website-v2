@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { HeaderSection } from "@/Common/HeaderSection";
-import CoursePage from "./Enrolbutton";
+import CoursePage from "../Enrollbutton/EnrollNowButton";
 
 
 export const CurriculumHeader = () => {
