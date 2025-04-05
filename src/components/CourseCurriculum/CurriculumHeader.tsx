@@ -39,7 +39,8 @@
 import { motion } from "framer-motion";
 import { HeaderSection } from "@/Common/HeaderSection";
 import CoursePage from "../Enrollbutton/EnrollNowButton";
-
+import { useRouter } from "next/navigation";
+import React from "react";
 
 export const CurriculumHeader = () => {
   const router = useRouter();
