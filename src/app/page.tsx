@@ -1,16 +1,17 @@
 
+import { StandOut } from "../components/stand-out";
+import { LandingSection } from "../components/landing-section";
+import { FAQs } from "../components/faqs";
 
-import { StandOut } from "./components/stand-out";
+import { TestimonalsSwiper } from "../components/testimonals";
 
-import { LandingSection } from "./components/landing-section";
-import { FAQs } from "./components/faqs";
+import Programs from "../components/courses/programs";
+import { Footercomponent } from "../components/footer";
+import { AluminiComponent } from "../components/placements";
+import { ExpertTutors } from "../components/ExpertTutors";
+import HelpButton from "../components/Helpbutton/HelpButton";
 
-import { TestimonalsSwiper } from "./components/testimonals";
 
-import Programs from "./components/courses/programs";
-import { Footercomponent } from "./components/Footer";
-import { AluminiComponent } from "./components/placements";
-import { ExpertTutors } from "./components/ExpertTutors";
 import EnrollPage from "./EnrollNow";
 
 
@@ -33,4 +34,7 @@ export default function Home() {
       <EnrollPage/>
       </>
   ); 
+      <HelpButton />
+    </>
+  );
 }
