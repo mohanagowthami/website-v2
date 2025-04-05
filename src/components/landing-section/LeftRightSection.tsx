@@ -4,7 +4,7 @@
 
 "use client";
 import { SectionWrapper } from "@/Common/SectionWrapper";
-import { ContactForm } from "./index";
+import FormSession from "@/Common/FormSession";
 import { SectionTitle } from "@/Common/SectionTitle";
 
 export const LeftRightSection = () => {
@@ -77,7 +77,7 @@ export const LeftRightSection = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 " id="contact-us">
             Let's get in touch
           </h2>
-          <ContactForm />
+          <FormSession/>
         </div>
       </div>
     </SectionWrapper>

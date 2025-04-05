@@ -1,6 +1,6 @@
 import { Header } from "./Header";
 import { LeftRightSection } from "./LeftRightSection";
 import {LandingSection} from "./LandingSection";
-import ContactForm from "./ContactForm";
+import  FormSession from "@/Common/FormSession"
 
-export { Header,LeftRightSection, LandingSection, ContactForm}
+export { Header,LeftRightSection, LandingSection, FormSession}
