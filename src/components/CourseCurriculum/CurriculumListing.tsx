@@ -83,7 +83,7 @@ const CurriculumListing: React.FC = () => {
               
               {/* Conditionally render Frontend heading for first week only for Full-Stack */}
               {isFullStack && weekIndex === 0 && (
-                <h2 className="text-xl font-bold text-gray-800 mb-4">Frontend -</h2>
+                <h2 className="text-xl font-bold text-gray-800 mb-4" >Frontend -</h2>
               )}
               
               <div className="border border-gray-200 rounded-lg overflow-hidden">
