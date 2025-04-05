@@ -44,7 +44,7 @@ const initialState: ActionState = {
   error: null,
 };
 
-const ContactForm = () => {
+const FormSession = () => {
   const {
     control,
     handleSubmit,
@@ -312,4 +312,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default FormSession;
