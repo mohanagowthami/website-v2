@@ -14,7 +14,7 @@
   }
 
   
-   export const coursesData: CoursesData = {
+   export const coursesData: CoursesData={
     "Full-Stack": {
       title: "Full Stack",
       weeks: [
