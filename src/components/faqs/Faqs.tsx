@@ -104,7 +104,7 @@ const FAQs = () => {
             ))}
           </div>
           <div className="w-full max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto mt-4">
-            <p className="text-sm text-gray-500">
+            <div className="text-sm text-gray-500">
               Still you have questions, please{" "}
               <motion.p 
                 whileHover={{ scale: 1.05 }} 
@@ -114,7 +114,7 @@ const FAQs = () => {
               >
                 Contact Us
               </motion.p>
-            </p>
+            </div>
           </div>
         </section>
       </div>
