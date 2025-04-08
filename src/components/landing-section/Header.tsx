@@ -33,7 +33,7 @@ export const Header = () => {
 
   return (
     <div className="fixed w-full z-50 bg-white shadow-sm">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-3">
         {/* Large Desktop (lg and up) - Full navigation */}
         <div className="hidden lg:flex justify-between items-center py-2">
           <HeaderSection />
