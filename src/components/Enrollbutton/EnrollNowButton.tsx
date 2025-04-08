@@ -1,4 +1,5 @@
 'use client';
+
 import { useRouter } from 'next/navigation';
 
 const CoursePage = () => {
@@ -9,14 +10,17 @@ const CoursePage = () => {
   };
 
   return (
+  
+    
     <div>
       <button onClick={handleEnroll}>
-        Enroll Now
+        EnrollNow
       </button>
 
       {/* OR use a regular anchor link: */}
       {/* <a href="/enroll#enroll-section">Go to Enroll Section</a> */}
     </div>
+    
   );
 };
 
