@@ -1,6 +1,7 @@
-"use client";
+'use client';
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from 'next/link';
 import { HeaderSection } from "@/Common/HeaderSection";
 
 export const Header = () => {
@@ -19,18 +20,6 @@ export const Header = () => {
     { name: "FAQs", id: "faqs" },
   ];
 
-  const scrollToSection = (id: string) => {
-    setSelectedTab(id);
-    const target = document.getElementById(id);
-    if (target) {
-      const offset = 150;
-      window.scrollTo({
-        top: target.offsetTop - offset,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <div className="fixed w-full z-50 bg-white shadow-sm">
       <div className="container mx-auto px-3">
@@ -40,9 +29,10 @@ export const Header = () => {
           <nav className="relative flex text-blue-950 p-3 rounded-lg">
             <div className="flex space-x-4">
               {tabs.map((tab) => (
-                <button
+                <Link
                   key={tab.id}
-                  onClick={() => scrollToSection(tab.id)}
+                  href={`/#${tab.id}`}
+                  onClick={() => setSelectedTab(tab.id)}
                   className="relative px-4 py-2 text-sm font-medium whitespace-nowrap"
                 >
                   {selectedTab === tab.id && (
@@ -53,21 +43,22 @@ export const Header = () => {
                     />
                   )}
                   <span className="relative z-10">{tab.name}</span>
-                </button>
+                </Link>
               ))}
             </div>
           </nav>
         </div>
 
         {/* Medium Screens (md to lg) - Compact navigation */}
-        <div className="hidden md:flex lg:hidden justify-between items-center py-4 ">
+        <div className="hidden md:flex lg:hidden justify-between items-center py-4">
           <HeaderSection />
           <nav className="relative flex text-blue-950 p-2 rounded-lg">
             <div className="flex space-x-1">
               {tabs.map((tab) => (
-                <button
+                <Link
                   key={tab.id}
-                  onClick={() => scrollToSection(tab.id)}
+                  href={`/#${tab.id}`}
+                  onClick={() => setSelectedTab(tab.id)}
                   className="relative px-3 py-2 text-xs font-medium whitespace-nowrap"
                 >
                   {selectedTab === tab.id && (
@@ -80,7 +71,7 @@ export const Header = () => {
                   <span className="relative z-10">
                     {tab.name.length > 8 ? tab.name.substring(0, 7) + "..." : tab.name}
                   </span>
-                </button>
+                </Link>
               ))}
             </div>
           </nav>
@@ -124,14 +115,15 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden absolute w-full bg-white shadow-md   z-40"
+            className="md:hidden absolute w-full bg-white shadow-md z-40"
           >
             <div className="flex flex-col p-2">
               {tabs.map((tab) => (
-                <button
+                <Link
                   key={tab.id}
+                  href={`/#${tab.id}`}
                   onClick={() => {
-                    scrollToSection(tab.id);
+                    setSelectedTab(tab.id);
                     setIsMenuOpen(false);
                   }}
                   className={`px-4 py-3 text-left whitespace-nowrap ${
@@ -141,7 +133,7 @@ export const Header = () => {
                   }`}
                 >
                   {tab.name}
-                </button>
+                </Link>
               ))}
             </div>
           </motion.div>
