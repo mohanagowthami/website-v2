@@ -8,23 +8,31 @@ import { Header } from '@/components/landing-section';
 const EnrollPage = () => {
   // Scroll to section based on hash
   useEffect(() => {
-    const scrollToHashElement = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        const element = document.getElementById(hash.substring(1)); // Remove '#'
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
+    const scrollToHash = () => {
+      const { hash } = window.location;
+      if (!hash) return;
+  
+      const element = document.getElementById(hash.substring(1));
+      if (!element) return;
+  
+      // Get header height dynamically (or use a fixed value like 100)
+      const header = document.querySelector('header');
+      const headerHeight = header ? header.offsetHeight : 100;
+  
+      // Calculate scroll position (element top - header height)
+      const elementTop = element.getBoundingClientRect().top + window.scrollY;
+      const scrollToPosition = elementTop - headerHeight;
+  
+      window.scrollTo({ top: scrollToPosition, behavior: 'smooth' });
     };
-
-    scrollToHashElement(); // Initial scroll on load
-
-    window.addEventListener('hashchange', scrollToHashElement); // Scroll on hash change
-
-    return () => {
-      window.removeEventListener('hashchange', scrollToHashElement); // Cleanup
-    };
+  
+    // Run on page load
+    setTimeout(scrollToHash, 100); // Small delay for DOM readiness
+  
+    // Re-run on hash change (e.g., browser back button)
+    window.addEventListener('hashchange', scrollToHash);
+  
+    return () => window.removeEventListener('hashchange', scrollToHash);
   }, []);
 
   return (
