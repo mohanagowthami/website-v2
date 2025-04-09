@@ -10,17 +10,7 @@ import { Footercomponent } from "../components/footer";
 import { AluminiComponent } from "../components/placements";
 import { ExpertTutors } from "../components/ExpertTutors";
 import HelpButton from "../components/Helpbutton/HelpButton";
-import CoursePage from "@/components/Enrollbutton/EnrollNowButton";
-
-
-
-
-
-
-
-
-
-
+// import CoursePage from "@/components/Enrollbutton/EnrollNowButton";
 export default function Home() {
   return (
     <>
@@ -34,7 +24,7 @@ export default function Home() {
       <FAQs/>
       <Footercomponent/>
       <HelpButton />
-      <CoursePage/>
+      {/* <CoursePage/> */}
       </>
   ); 
       
