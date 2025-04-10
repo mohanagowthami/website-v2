@@ -38,7 +38,7 @@ export const Header = () => {
                   {selectedTab === tab.id && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-blue-500 rounded-md"
+                      className="absolute inset-0 bg-indigo-400 rounded-md"
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     />
                   )}
@@ -64,7 +64,7 @@ export const Header = () => {
                   {selectedTab === tab.id && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-blue-500 rounded-md"
+                      className="absolute inset-0 bg-indigo-400 rounded-md"
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     />
                   )}
