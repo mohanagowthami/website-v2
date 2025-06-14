@@ -14,6 +14,8 @@ interface formDataType {
 
 }
 
+
+
 export const contactFormSubmission = async (formData: formDataType) => {
     try {
 
@@ -51,6 +53,7 @@ export const contactFormSubmission = async (formData: formDataType) => {
         }
     }
 
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     catch (error: any) {
         console.log(error)
 
