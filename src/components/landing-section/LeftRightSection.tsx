@@ -6,6 +6,7 @@
 import { SectionWrapper } from "@/Common/SectionWrapper";
 import FormSession from "@/Common/FormSession";
 import { SectionTitle } from "@/Common/SectionTitle";
+import Image from 'next/image';
 
 export const LeftRightSection = () => {
   return (
@@ -31,7 +32,14 @@ export const LeftRightSection = () => {
           <div className="bg-white p-[28px] rounded-[20px] border border-[#e4e7ec] xl:max-w-[85%] 2xl:max-w-[78%]">
             <div className="flex content-center items-center w-full gap-4">
               <div className="flex items-center gap-3 w-1/2">
-                <img src="500+.svg" alt="500+ Assisted" className="w-9 h-9" />
+                <Image
+  src="/500+.svg" // assuming it's in the public folder
+  alt="500+ Assisted"
+  width={36} // 9 * 4 = 36px
+  height={36}
+  className="w-9 h-9"
+/>
+
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">500+</h3>
                   <p className="text-sm text-gray-600">Get Assisted</p>

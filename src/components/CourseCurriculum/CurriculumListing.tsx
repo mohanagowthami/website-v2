@@ -14,7 +14,7 @@ interface Course {
   title: string;
   weeks: Week[];
 }
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface CoursesData {
   [key: string]: Course;
 }
@@ -50,6 +50,7 @@ const CurriculumListing: React.FC = () => {
   const course = coursesData[activeCourse];
   const isFullStack = activeCourse === 'Full-Stack'; // Matches the key in coursesData
   const week12Index = isFullStack ? course.weeks.findIndex(week => week.title.includes('Week 12')) : -1;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 
   return (
     <div className="w-full">
@@ -92,15 +93,21 @@ const CurriculumListing: React.FC = () => {
                   onClick={() => toggleWeek(weekIndex)}
                 >
                   <svg
-                    className={`w-5 h-5 text-blue-400 transform transition-transform duration-200 ${
-                      expandedWeeks.includes(weekIndex) ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+  className={`w-5 h-5 text-blue-400 transform transition-transform duration-200 ${
+    expandedWeeks.includes(weekIndex) ? 'rotate-180' : ''
+  }`}
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    d="M19 9l-7 7-7-7"
+  />
+</svg>
+
                   <h2 className="text-[16px] text-[#1D2838] flex-1">{week.title}</h2>
                 </div>
 
