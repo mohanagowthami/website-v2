@@ -15,7 +15,7 @@ export const StandOut = () => {
     requestCBAlign: "left"
    }}    
   showRequestCallbackButton={true}
-  cs="bg-gray-100"
+  cs="bg-[#fbfcfc]"
    >
       
 

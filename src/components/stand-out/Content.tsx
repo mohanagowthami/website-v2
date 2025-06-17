@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 
 import { motion } from "framer-motion";
 
@@ -93,11 +94,13 @@ export function Contentsection() {
               custom={index}
             >
               <span className="flex items-center gap-2">
-                <img 
-                  src={feature.icon} 
-                  alt={`${feature.title} icon`} 
-                  className="w-12 h-9" 
-                />
+                <Image
+  src={`/${feature.icon}`} // Ensure the image is in the /public directory
+  alt={`${feature.title} icon`}
+  width={48}  // 12 * 4px
+  height={36} // 9 * 4px
+  className="w-12 h-9"
+/>
                 {feature.title}
               </span>
             </motion.li>

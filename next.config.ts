@@ -6,13 +6,16 @@
 
 // export default nextConfig;
 
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+  distDir: 'build', // instead of default `.next`
   experimental: {
-    turbo: false,
+    turbo: {
+      rules: {},
+    },
   },
-}
+  images: {
+    domains: ['framerusercontent.com'],
+  },
+};
 
-module.exports = nextConfig
-turbo: {}
-
+module.exports = nextConfig;
