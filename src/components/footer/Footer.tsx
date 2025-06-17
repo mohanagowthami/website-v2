@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import { SectionWrapper } from "@/Common";
 import { motion } from "framer-motion";
 
@@ -27,7 +28,13 @@ export function Footer() {
               <h2 className="mt-6 text-[14px] md:text-[16px] font-semibold text-[#f2f3f6] lg:text-[16px]">Reach us</h2>
 
               <div className="flex items-center space-x-3 mt-3">
-                <img src="whatsappicon.png" className="w-6 h-6" alt="WhatsApp" />
+               <Image
+  src="/whatsappicon.png"
+  alt="WhatsApp"
+  width={24} // 6 * 4 = 24px
+  height={24}
+  className="w-6 h-6"
+/>
                 <div className="text-[#cfd4dc] text-[12px] md:text-[14px]">
                   <a href="https://wa.me/917032378883" className="text-[#cfd4dc] hover:text-blue-500">
                     <span>+91 7032378883</span>
@@ -53,7 +60,7 @@ export function Footer() {
                 className="text-[#2E90FA] font-bold hover:underline cursor-pointer text-[12px] md:text-[14px]"
                 onClick={() => scrollToSection("faqs")}
               >
-                FAQ's
+                FAQ&apos;s
               </motion.p>
               <motion.p
                 whileHover={{ scale: 1.05 }}
@@ -107,10 +114,10 @@ export function Footer() {
 
               {/* Social Media */}
               <div className="flex space-x-4 mt-6">
-                <img src="instagram-icon.svg" className="cursor-pointer hover:opacity-80 w-6 h-6" alt="Instagram" />
-                <img src="facebook-icon.svg" className="cursor-pointer hover:opacity-80 w-6 h-6" alt="Facebook" />
-                <img src="github-icon.svg" className="cursor-pointer hover:opacity-80 w-6 h-6" alt="GitHub" />
-                <img src="linkedin-icon.svg" className="cursor-pointer hover:opacity-80 w-6 h-6" alt="LinkedIn" />
+                <Image src="/instagram-icon.svg" alt="Instagram" width={24} height={24} className="cursor-pointer hover:opacity-80 w-6 h-6" />
+                <Image src="/facebook-icon.svg" alt="Facebook" width={24} height={24} className="cursor-pointer hover:opacity-80 w-6 h-6" />
+                <Image src="/github-icon.svg" alt="GitHub" width={24} height={24} className="cursor-pointer hover:opacity-80 w-6 h-6" />
+                <Image src="/linkedin-icon.svg" alt="LinkedIn" width={24} height={24} className="cursor-pointer hover:opacity-80 w-6 h-6" />
               </div>
             </div>
           </div>
