@@ -45,7 +45,7 @@ const HelpPage = () => {
     mode: "onChange",
   });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async () => {
     setSubmitLoading(true);
     try {
       // Simulate an API call or form submission

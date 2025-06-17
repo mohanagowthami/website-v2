@@ -54,7 +54,7 @@ const EnrollPage = () => {
           {/* Left Side - Contact Form */}
           <div className="flex items-center justify-center p-8 z-10 mt-12">
             <div className="w-full max-w-md p-8 rounded-4xl shadow-xl bg-white">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Let's Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Let &apos;s Get in Touch</h2>
               <FormSession />
             </div>
           </div>

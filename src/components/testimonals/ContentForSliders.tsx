@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 // Define the props interface
 interface SlideProps {
@@ -24,7 +25,13 @@ export const ContentForSliders: React.FC<SlideProps> = ({ text, name, logo }) =>
                         <div className="w-0.5 h-15 bg-gray-400"></div>
                     </div>
                     <div className="flex flex-col items-center w-1/4">
-                        <img src={logo} alt={`${name}'s Company Logo`} className="w-34 h-34 object-contain" />
+                        <Image
+  src={logo}
+  alt={`${name}'s Company Logo`}
+  width={136}  // 34 * 4 (Tailwind uses rem units = 4px base)
+  height={136}
+  className="object-contain"
+/>
                     </div>
                 </div>
             </div>

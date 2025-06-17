@@ -1,5 +1,5 @@
 'use client'
-import { SectionTitle } from "@/Common";
+
 import Image from "next/image";
 
 const people = [
@@ -7,21 +7,21 @@ const people = [
     name: "Kishore Gundra",
     course: "ECE",
     college: "Ideal Engineering College",
-    company: "/Amazon.png",
+    company: "/amazon.png",
     image: "/Kishore_Gundra.jpg.webp",
   },
   {
     name: "Harish Kollu",
     course: "ECE",
     college: "Krishna University College",
-    company: "/Amazon.png",
+    company: "/amazon.png",
     image: "/Harish_Kollu.webp",
   },
   {
     name: "Siva Durga Prasad",
     course: "CSE",
     college: "Aditya Engineering College",
-    company: "/Amazon.png",
+    company: "/amazon.png",
     image: "/Siva_Durga_Prasad.webp",
   },
 ];
@@ -51,7 +51,13 @@ export const AlumniCard = () => {
                   <p className="text-gray-500 text-[14px]">{person.course}</p>
                   <p className="text-gray-500 text-[14px]">{person.college}</p>
                   <div className="mt-2">
-                    <img src="down-arrow.svg" alt="arrow" className="w-9 h-10 mx-auto" />
+<Image
+  src="/down-arrow.svg"
+  alt="arrow"
+  width={36} // Equivalent to Tailwind w-9 (9 * 4px)
+  height={40} // Equivalent to Tailwind h-10 (10 * 4px)
+  className="mx-auto"
+/>
                     <Image
                       src={person.company}
                       alt="Company"

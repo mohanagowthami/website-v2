@@ -44,6 +44,7 @@ const initialState: ActionState = {
   error: null,
 };
 
+ /* eslint-disable @typescript-eslint/no-explicit-any */
 const FormSession = () => {
   const {
     control,
@@ -59,6 +60,8 @@ const FormSession = () => {
 
   const submitFormAction = async (prevState: ActionState, formData: FormData) => {
     try {
+
+       /* eslint-disable @typescript-eslint/no-explicit-any */
       const response: any = await contactFormSubmission({
         name: formData.name,
         mobileNumber: formData.mobileNumber,
@@ -77,7 +80,9 @@ const FormSession = () => {
         toast.error(response.message || 'Submission failed');
         return { success: false, error: response.message || 'Submission failed' };
       }
-    } catch (error: any) {
+    }
+     /* eslint-disable @typescript-eslint/no-explicit-any */
+    catch (error: any) {
       toast.error('Something went wrong. Please try again!');
       return { success: false, error: error.message || 'Submission failed' };
     }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 
 import { motion } from "framer-motion";
 
@@ -50,29 +51,7 @@ export function Contentsection() {
     },
   };
 
-  const buttonVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 1.8,
-        type: "spring",
-        stiffness: 100,
-      },
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10,
-      },
-    },
-    tap: {
-      scale: 0.95,
-    },
-  };
+  
 
   return (
    
@@ -93,11 +72,13 @@ export function Contentsection() {
               custom={index}
             >
               <span className="flex items-center gap-2">
-                <img 
-                  src={feature.icon} 
-                  alt={`${feature.title} icon`} 
-                  className="w-12 h-9" 
-                />
+                <Image
+  src={`/${feature.icon}`} // Ensure the image is in the /public directory
+  alt={`${feature.title} icon`}
+  width={48}  // 12 * 4px
+  height={36} // 9 * 4px
+  className="w-12 h-9"
+/>
                 {feature.title}
               </span>
             </motion.li>

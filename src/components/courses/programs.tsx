@@ -115,6 +115,8 @@ const Programs: React.FC = () => {
                 </span>
               </p>
               <div className="mt-4 text-[#667084] space-y-2 flex-grow">
+              
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 {program.features.map((feature:any, idx:number) => (
                   <div key={idx} className="flex items-center gap-2">
                     <Image src="/star.svg" alt="Star" width={14} height={14} />

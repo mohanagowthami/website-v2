@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,31 +14,31 @@ const tutors = [
     name: "Gajula Mohana Gowthami",
     role: "Staff Engineer",
     company: "Nagarro",
-    image: "GajulaMohanaGowthami.png",
+    image: "/GajulaMohanaGowthami.png",
   },
   {
     name: "Gajula Srinivas",
     role: "Business Analyst",
     company: "Amazon",
-    image: "GajulaSrinivas.png",
+    image: "/GajulaSrinivas.png",
   },
   {
     name: "Mahesh",
     role: "",
     company: "Deloitte",
-    image: "Mahesh.png",
+    image: "/Mahesh.png",
   },
   {
     name: "Kone Srikanth",
     role: "Manager",
     company: "State Street",
-    image: "KoneSrikanth.png",
+    image: "/KoneSrikanth.png",
   },
   {
     name: "Somaraju",
     role: "",
     company: "",
-    image: "Somaraju.png",
+    image: "/Somaraju.png",
   },
 ];
 
@@ -80,11 +81,14 @@ const ExpertTutors = () => {
         {tutors.map((tutor, index) => (
           <SwiperSlide key={index}>
             <div className=" border-blue-100 rounded-xl p-5  hover:shadow-lg transition duration-300 flex flex-col items-center text-center h-[260px] w-[240px] mx-auto">
-              <img
-                src={tutor.image}
-                alt={tutor.name}
-                className="w-30 h-30 rounded-full  mb-3"
-              />
+              <Image
+  src={tutor.image}
+  alt={tutor.name}
+  width={120} // Set appropriate width
+  height={120} // Set appropriate height
+  className="rounded-full mb-3"
+  style={{ width: '120px', height: '120px' }} // Optional: for Tailwind consistency
+/>
               <h3 className="text-base font-semibold text-gray-900">
                 {tutor.name}
               </h3>
