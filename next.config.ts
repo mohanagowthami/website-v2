@@ -7,7 +7,7 @@
 // export default nextConfig;
 
 const nextConfig = {
-  distDir: 'build', // instead of default `.next`
+  // instead of default `.next`
   experimental: {
     turbo: {
       rules: {},
