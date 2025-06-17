@@ -1,5 +1,5 @@
 'use client'
-import { SectionTitle } from "@/Common";
+
 import Image from "next/image";
 
 const people = [

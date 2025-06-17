@@ -51,29 +51,7 @@ export function Contentsection() {
     },
   };
 
-  const buttonVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 1.8,
-        type: "spring",
-        stiffness: 100,
-      },
-    },
-    hover: {
-      scale: 1.05,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10,
-      },
-    },
-    tap: {
-      scale: 0.95,
-    },
-  };
+  
 
   return (
    
