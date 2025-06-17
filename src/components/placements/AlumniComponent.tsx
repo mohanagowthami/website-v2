@@ -15,7 +15,7 @@ export const AluminiComponent=()=>{
        requestCBAlign: "right"
     }}    
     showRequestCallbackButton={true}
-     cs=" bg-[#fbfcfc]"
+     cs="bg-[#fbfcfc]"
     >
       <AlumniCard/>
       
