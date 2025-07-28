@@ -50,7 +50,7 @@ const CurriculumListing: React.FC = () => {
   const course = coursesData[activeCourse];
   const isFullStack = activeCourse === 'Full-Stack'; // Matches the key in coursesData
   const week12Index = isFullStack ? course.weeks.findIndex(week => week.title.includes('Week 12')) : -1;
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 
   return (
     <div className="w-full">

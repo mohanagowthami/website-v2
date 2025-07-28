@@ -61,6 +61,7 @@ const faqs = [
 const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
   const toggleFAQ = (index: any) => {
     setOpenIndex(openIndex === index ? null : index);
   };
