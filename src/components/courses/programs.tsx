@@ -59,7 +59,7 @@ const Programs: React.FC = () => {
 
 
   return (
-<SectionWrapper cs=""  
+<SectionWrapper cs="bg-white"  
         sectionTitleProps={{
           title: "Choose Your Path to ",
           blueColorTitle: "Sucess",

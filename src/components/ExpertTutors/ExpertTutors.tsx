@@ -45,6 +45,7 @@ const tutors = [
 const ExpertTutors = () => {
   return (
     <SectionWrapper
+    cs="bg-white"
          
           sectionTitleProps={{
             title: "Meet Our Industry ",

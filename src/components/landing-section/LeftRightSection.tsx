@@ -1,7 +1,4 @@
 
-
-
-
 "use client";
 import { SectionWrapper } from "@/Common/SectionWrapper";
 import FormSession from "@/Common/FormSession";
@@ -13,9 +10,9 @@ export const LeftRightSection = () => {
     <section id="contact-us">
     <SectionWrapper
       showRequestCallbackButton={false}
-      cs=" md:pt-18 lg:pt-32"
+      cs=" bg-white pt-12 md:pt-18 lg:pt-32"
     >
-      <div className="max-w-[90%] sm:max-w-[83%] md:max-w-[75%] lg:max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-[15%]">
+      <div className="pt-12 max-w-[90%] sm:max-w-[83%] md:max-w-[75%] lg:max-w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 lg:gap-[15%]">
         {/* Left Section */}
         <div className="flex flex-col gap-6 max-w-xl ">
           <SectionTitle
@@ -45,7 +42,7 @@ export const LeftRightSection = () => {
                   <p className="text-sm text-gray-600">Get Assisted</p>
                 </div>
               </div>
-              <div className="h-12 w-[3px] bg-[#f2f3f6] mx-4 md:mx-10"></div>
+              <div className="h-12 w-[4px] bg-[#f2f3f6] mx-4 md:mx-10"></div>
               <div className="flex items-center gap-3 w-1/2">
                 <img src="10+.svg" alt="10+ Collaborations" className="w-9 h-9" />
                 <div>
@@ -56,8 +53,8 @@ export const LeftRightSection = () => {
             </div>
 
             <div className="flex items-center gap-[25%] my-10">
-              <div className="w-full md:w-3/4 xl:w-1/2 h-[2px] bg-[#f2f3f6]"></div>
-              <div className="w-full md:w-3/4 xl:w-1/2 h-[2px] bg-[#f2f3f6]"></div>
+              <div className="w-full md:w-3/4 xl:w-1/2 h-[4px] bg-[#f2f3f6]"></div>
+              <div className="w-full md:w-3/4 xl:w-1/2 h-[4px] bg-[#f2f3f6]"></div>
             </div>
 
             <div className="flex content-center items-center w-full gap-4">
@@ -68,9 +65,9 @@ export const LeftRightSection = () => {
                   <p className="text-sm text-gray-600">Average Salary</p>
                 </div>
               </div>
-              <div className="h-12 w-[3px] bg-[#f2f3f6] mx-4 md:mx-10"></div>
+              <div className="h-12 w-[4px] bg-[#f2f3f6] mx-4 md:mx-10"></div>
               <div className="flex items-center gap-3 w-1/2">
-                <img src="18LPA.svg" alt="18LPA Highest Salary" className="w-9 h-9" />
+                <img src="/18LPA.svg" alt="18LPA Highest Salary" className="w-9 h-9" />
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">18LPA</h3>
                   <p className="text-sm text-gray-600">Highest Salary</p>
