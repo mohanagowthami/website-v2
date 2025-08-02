@@ -62,6 +62,7 @@ export default function App() {
         effect="slide"
         grabCursor={true}
         centeredSlides={true}
+        loop={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,

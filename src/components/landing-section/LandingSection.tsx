@@ -5,9 +5,7 @@ export const LandingSection=()=>{
 
     return <>
     
-    <Header/>
-    
-   
+    <Header/>  
     <LeftRightSection/>
     
     </>

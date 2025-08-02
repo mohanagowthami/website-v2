@@ -30,7 +30,7 @@ export const SectionWrapper = ({
     "justify-start";
 
   return (
-    <div className={`pt-24 p-6 md:p-12 lg:px-[100px] lg:py-[60px]  ${cs ? cs : ""}`}>
+    <div className={`p-6 md:p-12 lg:px-[100px] lg:py-[60px]  ${cs ? cs : ""}`}>
       {sectionTitleProps && (
         <SectionTitle {...sectionTitleProps} />
       )}

@@ -53,7 +53,7 @@ const CurriculumListing: React.FC = () => {
 
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white">
       <CurriculumHeader />
       <h1 className="text-[33px] font-semibold flex justify-center text-gray-800 mb-10">
         {isFullStack ? 'Full-Stack' : course.title}
