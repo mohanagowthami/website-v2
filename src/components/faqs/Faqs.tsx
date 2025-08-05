@@ -68,6 +68,7 @@ const FAQs = () => {
 
   return (
     <SectionWrapper
+    cs="bg-white"
       sectionTitleProps={{
         title: "Have",
         blueColorTitle: "Questions",

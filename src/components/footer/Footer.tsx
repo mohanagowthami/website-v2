@@ -44,7 +44,13 @@ export function Footer() {
               </div>
 
               <div className="flex items-center space-x-3 mt-3">
-                <Image src="gmail-icon.svg" className="w-6 h-6" alt="Email" />
+               <Image
+  src="/gmail-icon.svg"
+  alt="Email"
+  width={24}  // Required (matches w-6 in pixels: 6 * 4 = 24)
+  height={24} // Required (matches h-6 in pixels)
+  className="w-6 h-6"
+/>
                 <a href="mailto:contact@hypersonicc.com" className="text-[#cfd4dc] text-[12px] md:text-[14px] hover:underline">
                   contact@hypersonicc.com
                 </a>
@@ -106,7 +112,13 @@ export function Footer() {
             <div className="space-y-5 mt-6">
               <h4 className="text-[14px] md:text-[16px] font-semibold text-[#f2f3f6]">Contact Us</h4>
               <div className="flex space-x-3">
-                <Image src="location-icon.svg" className="w-6 h-6 flex-shrink-0" alt="Location" />
+                <Image
+  src="/location-icon.svg"
+  alt="Location"
+  width={24}  // Required - matches w-6 (6 * 4 = 24px)
+  height={24} // Required - matches h-6
+  className="w-6 h-6 flex-shrink-0"
+/>
                 <span className="text-gray-400 text-[12px] md:text-[14px]">
                   Ashok Nagar, Near Veerkamal Theater, Above Reliance Smart Point, Kakinada, Andhra Pradesh 533002
                 </span>
